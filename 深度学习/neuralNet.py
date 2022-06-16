@@ -16,8 +16,8 @@ class neuralNetwork:
         self.lr = learningrate
 
         # 设置输入层和输出层权重矩阵
-        self.wih = np.random.normal(0.0, pow(self.hnodes, -0.5), (self.hnodes, self.inodes))
-        self.who = np.random.normal(0.0, pow(self.onodes, -0.5), (self.onodes, self.hnodes))
+        self.wih = np.random.normal(0.0, pow(self.hnodes, -0.5), (self.inodes, self.hnodes))
+        self.who = np.random.normal(0.0, pow(self.onodes, -0.5), (self.hnodes, self.onodes))
 
         # 用sigmoid作为激活函数
         self.activation_function = lambda x: scipy.special.expit(x)
@@ -28,24 +28,33 @@ class neuralNetwork:
         inputs = np.array(inputs_list, ndmin=2).T
         targets = np.array(targets_list, ndmin=2).T
 
-        # 计算隐藏层的输入
+        # 计算’输入层向量与输入层到隐藏层连接的权重向量‘的点积
         hidden_inputs = np.dot(self.wih, inputs)
-        # 计算隐藏层的输出信号
+        # 计算‘隐藏层的激活’
         hidden_outputs = self.activation_function(hidden_inputs)
 
-        # 计算输出层的输入
+        # 计算‘隐藏层(输出)向量与隐藏层到输出层连接的权重向量’的点积
         final_inputs = np.dot(self.who, hidden_outputs)
-        # 计算输出层的最终输出
+        # 计算‘输出层的激活’
         final_outputs = self.activation_function(final_inputs)
 
-        # 输出层误差
-        output_errors = targets - final_outputs
-        # 隐藏层误差
-        hidden_errors = np.dot(self.who.T, output_errors)
+        # 均方误差对每个输出的偏导：输出层各个输出的误差组成的向量
+        outputlayers_out_errors = final_outputs - targets
 
-        # 反向传播更新参数
-        self.who += self.lr * np.dot((output_errors * final_outputs * (1.0 - final_outputs)), np.transpose(hidden_outputs))
-        self.wih += self.lr * np.dot((hidden_errors * hidden_outputs * (1.0 - hidden_outputs)), np.transpose(inputs))
+        # 公式1：输出层各个输入的误差组成的向量
+        outputlayers_in_errors = np.dot(outputlayers_out_errors, final_outputs * (1.0 - final_outputs))
+
+        # 公式2：通过反向传播更改由隐藏层到输出之间的权重矩阵
+        self.who -= self.lr * np.dot(outputlayers_in_errors, np.transpose(hidden_outputs))
+
+        # 公式3：隐藏层各个输出的误差组成的向量
+        hiddenlayers_out_errors = np.dot(self.who.T, outputlayers_in_errors)
+
+        # 公式4：隐藏层各个输入的误差组成的向量
+        hiddenlayers_in_errors = np.dot(1 - hidden_outputs * hidden_outputs, hiddenlayers_out_errors)
+        
+        # 公式5：通过反向传播更改由输入层到隐藏层之间的权重矩阵
+        self.wih -= self.lr * np.dot(hiddenlayers_in_errors, np.transpose(inputs))
         pass
 
     # 用更新后的参数输出结果
