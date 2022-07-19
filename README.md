@@ -10,7 +10,7 @@
 
 ![image](https://user-images.githubusercontent.com/64791841/172515286-26cdb01f-7468-4a52-9f01-c3b7c8a7af4c.png)
 
-### 加上误差误差后的图例
+### 加上误差后的图例
 
 ![46eafae2d408c130bd990d07486bc25](https://user-images.githubusercontent.com/64791841/179711843-a3449cdb-a0b9-469e-acbe-d0c641a53eed.jpg)
 
