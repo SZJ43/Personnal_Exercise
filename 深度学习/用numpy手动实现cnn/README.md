@@ -401,3 +401,18 @@ array([[[ 0.1,  0.4,  0.9,  1.6],
  所得到的数组中的每个元素为，第一个矩阵中与该元素行号相同的元素与第二个矩阵与该元素列号相同的元素，两两相乘后再求和。
  
  np.dot不能使用广播机制。
+
+
+## 2022.7.21
+
+### 特征图的可视化代码
+    self.featureMap = np.zeros((a.shape[1], a.shape[2]))
+            for i in range(a.shape[0]):
+                plt.figure('batch_{}'.format(i))
+                for j in range(a_prev_padded.shape[3]):
+                    plt.subplot(4, 8, j + 1)
+                    self.featureMap = a[i, :, :, j]
+                    plt.imshow(self.featureMap)
+                    plt.xticks()
+                    plt.yticks()
+            plt.show()
