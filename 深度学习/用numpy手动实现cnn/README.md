@@ -416,3 +416,6 @@ array([[[ 0.1,  0.4,  0.9,  1.6],
                     plt.xticks()
                     plt.yticks()
             plt.show()
+            
+[卷积、最大池化和Dropout后的特征图总结.docx](https://github.com/SZJ43/Personnal_Exercise/files/9164125/Dropout.docx)
+
