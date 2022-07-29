@@ -10,7 +10,7 @@
   
   ![9d532bab0599338ddbb6b914e5a8adc](https://user-images.githubusercontent.com/64791841/181664062-ef44b152-250a-454c-b541-79834f4404f8.jpg)
 
-以下是具体模块的代码
+以下是几个关键模块的代码：
 
 #### 1、对cifar-10数据集图像的预处理
       transform = transforms.Compose([transforms.ToTensor(),
@@ -38,7 +38,7 @@
       self.dropout10 = nn.Dropout(0.1)
 
       self.fc1 = nn.Linear(256 * 6 * 6, 10)
-        
+      
  #### 3、组装过程
  
       x = self.bn1(F.relu(self.conv1(x)))
@@ -61,7 +61,7 @@
  #### 4、超参数的设置和输出正确率
  
       optimizer = optim.Adam(self.parameters(), lr=0.0005) # 学习率设为0.0005
-      for epoch in range(50):  # loop over the dataset multiple times
+      for epoch in range(50):  # 训练轮数设置为50
       timestart = time.time()
       running_loss = 0.0
       total = 0
@@ -91,5 +91,4 @@
               total += labels.size(0)
               correct += (predicted == labels).sum().item()
               print('Accuracy of the network on the %d train images: %.3f %%' % (total, 100.0 * correct / total))
-     
      
