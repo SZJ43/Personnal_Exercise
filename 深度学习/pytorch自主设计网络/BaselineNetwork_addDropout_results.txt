@@ -153,3 +153,160 @@ Finished Training
 Accuracy of the network on the 10000 test images: 72.220 %
 
 进程已结束,退出代码0
+
+### 以下是丢弃率改为0.2后的结果
+D:\Anaconda\python.exe D:/AIdocs/pytorch_resnet_cifar10-master/BaselineNetwork_addDropout.py
+[0,    99] loss: 2.3025
+Accuracy of the network on the 100 train images: 12.000 %
+epoch 0 cost 8.083312 sec
+[1,    99] loss: 2.2661
+Accuracy of the network on the 100 train images: 12.000 %
+epoch 1 cost 5.407050 sec
+[2,    99] loss: 2.0014
+Accuracy of the network on the 100 train images: 25.000 %
+epoch 2 cost 5.350801 sec
+[3,    99] loss: 1.8662
+Accuracy of the network on the 100 train images: 29.000 %
+epoch 3 cost 5.390988 sec
+[4,    99] loss: 1.7065
+Accuracy of the network on the 100 train images: 39.000 %
+epoch 4 cost 5.361988 sec
+[5,    99] loss: 1.5817
+Accuracy of the network on the 100 train images: 50.000 %
+epoch 5 cost 5.393955 sec
+[6,    99] loss: 1.5033
+Accuracy of the network on the 100 train images: 41.000 %
+epoch 6 cost 5.336987 sec
+[7,    99] loss: 1.4320
+Accuracy of the network on the 100 train images: 44.000 %
+epoch 7 cost 5.384124 sec
+[8,    99] loss: 1.3917
+Accuracy of the network on the 100 train images: 49.000 %
+epoch 8 cost 5.399986 sec
+[9,    99] loss: 1.3461
+Accuracy of the network on the 100 train images: 58.000 %
+epoch 9 cost 5.399680 sec
+[10,    99] loss: 1.2728
+Accuracy of the network on the 100 train images: 53.000 %
+epoch 10 cost 5.426988 sec
+[11,    99] loss: 1.2159
+Accuracy of the network on the 100 train images: 63.000 %
+epoch 11 cost 5.397482 sec
+[12,    99] loss: 1.1892
+Accuracy of the network on the 100 train images: 57.000 %
+epoch 12 cost 5.420990 sec
+[13,    99] loss: 1.1394
+Accuracy of the network on the 100 train images: 55.000 %
+epoch 13 cost 5.425179 sec
+[14,    99] loss: 1.0956
+Accuracy of the network on the 100 train images: 61.000 %
+epoch 14 cost 5.407488 sec
+[15,    99] loss: 1.0865
+Accuracy of the network on the 100 train images: 56.000 %
+epoch 15 cost 5.419740 sec
+[16,    99] loss: 1.0526
+Accuracy of the network on the 100 train images: 66.000 %
+epoch 16 cost 5.415250 sec
+[17,    99] loss: 1.0085
+Accuracy of the network on the 100 train images: 61.000 %
+epoch 17 cost 5.384036 sec
+[18,    99] loss: 0.9901
+Accuracy of the network on the 100 train images: 62.000 %
+epoch 18 cost 5.374986 sec
+[19,    99] loss: 0.9703
+Accuracy of the network on the 100 train images: 61.000 %
+epoch 19 cost 5.361146 sec
+[20,    99] loss: 0.9529
+Accuracy of the network on the 100 train images: 69.000 %
+epoch 20 cost 5.394353 sec
+[21,    99] loss: 0.9263
+Accuracy of the network on the 100 train images: 66.000 %
+epoch 21 cost 5.413041 sec
+[22,    99] loss: 0.9045
+Accuracy of the network on the 100 train images: 69.000 %
+epoch 22 cost 5.440711 sec
+[23,    99] loss: 0.8900
+Accuracy of the network on the 100 train images: 68.000 %
+epoch 23 cost 5.435596 sec
+[24,    99] loss: 0.8460
+Accuracy of the network on the 100 train images: 72.000 %
+epoch 24 cost 5.394303 sec
+[25,    99] loss: 0.8421
+Accuracy of the network on the 100 train images: 78.000 %
+epoch 25 cost 5.390504 sec
+[26,    99] loss: 0.8245
+Accuracy of the network on the 100 train images: 69.000 %
+epoch 26 cost 5.364843 sec
+[27,    99] loss: 0.8138
+Accuracy of the network on the 100 train images: 72.000 %
+epoch 27 cost 5.445171 sec
+[28,    99] loss: 0.7962
+Accuracy of the network on the 100 train images: 71.000 %
+epoch 28 cost 5.395988 sec
+[29,    99] loss: 0.7919
+Accuracy of the network on the 100 train images: 75.000 %
+epoch 29 cost 5.376460 sec
+[30,    99] loss: 0.7649
+Accuracy of the network on the 100 train images: 76.000 %
+epoch 30 cost 5.402126 sec
+[31,    99] loss: 0.7489
+Accuracy of the network on the 100 train images: 78.000 %
+epoch 31 cost 5.471009 sec
+[32,    99] loss: 0.7429
+Accuracy of the network on the 100 train images: 74.000 %
+epoch 32 cost 5.398988 sec
+[33,    99] loss: 0.7215
+Accuracy of the network on the 100 train images: 74.000 %
+epoch 33 cost 5.426472 sec
+[34,    99] loss: 0.6952
+Accuracy of the network on the 100 train images: 76.000 %
+epoch 34 cost 5.421856 sec
+[35,    99] loss: 0.7049
+Accuracy of the network on the 100 train images: 72.000 %
+epoch 35 cost 5.417471 sec
+[36,    99] loss: 0.6947
+Accuracy of the network on the 100 train images: 74.000 %
+epoch 36 cost 5.396619 sec
+[37,    99] loss: 0.6828
+Accuracy of the network on the 100 train images: 75.000 %
+epoch 37 cost 5.403211 sec
+[38,    99] loss: 0.6532
+Accuracy of the network on the 100 train images: 68.000 %
+epoch 38 cost 5.425669 sec
+[39,    99] loss: 0.6401
+Accuracy of the network on the 100 train images: 76.000 %
+epoch 39 cost 5.409949 sec
+[40,    99] loss: 0.6407
+Accuracy of the network on the 100 train images: 81.000 %
+epoch 40 cost 5.391586 sec
+[41,    99] loss: 0.6274
+Accuracy of the network on the 100 train images: 82.000 %
+epoch 41 cost 5.400189 sec
+[42,    99] loss: 0.6166
+Accuracy of the network on the 100 train images: 75.000 %
+epoch 42 cost 5.386511 sec
+[43,    99] loss: 0.6082
+Accuracy of the network on the 100 train images: 82.000 %
+epoch 43 cost 5.452035 sec
+[44,    99] loss: 0.6096
+Accuracy of the network on the 100 train images: 70.000 %
+epoch 44 cost 5.420795 sec
+[45,    99] loss: 0.5946
+Accuracy of the network on the 100 train images: 77.000 %
+epoch 45 cost 5.413608 sec
+[46,    99] loss: 0.5748
+Accuracy of the network on the 100 train images: 77.000 %
+epoch 46 cost 5.421512 sec
+[47,    99] loss: 0.5743
+Accuracy of the network on the 100 train images: 80.000 %
+epoch 47 cost 5.462601 sec
+[48,    99] loss: 0.5684
+Accuracy of the network on the 100 train images: 76.000 %
+epoch 48 cost 5.428555 sec
+[49,    99] loss: 0.5607
+Accuracy of the network on the 100 train images: 78.000 %
+epoch 49 cost 5.454025 sec
+Finished Training
+Accuracy of the network on the 10000 test images: 75.040 %
+
+进程已结束,退出代码0
