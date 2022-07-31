@@ -33,19 +33,22 @@ class Net(nn.Module):
         super(Net, self).__init__()
         self.conv1 = nn.Conv2d(3, 32, 3, padding=1)
         self.conv2 = nn.Conv2d(32, 32, 3, padding=1)
-        self.conv3 = nn.Conv2d(32, 64, 3, padding=1)
-        self.conv4 = nn.Conv2d(64, 64, 3, padding=1)  # 10*10
-        self.conv5 = nn.Conv2d(64, 128, 3, padding=1)
-        self.conv6 = nn.Conv2d(128, 128, 3, padding=1)
-        self.conv7 = nn.Conv2d(128, 128, 3, padding=1)
-        self.conv8 = nn.Conv2d(128, 128, 3, padding=1)
-        self.conv9 = nn.Conv2d(128, 128, 3, padding=1)
+        self.conv3 = nn.Conv2d(32, 32, 3, padding=1)
+
+        self.conv4 = nn.Conv2d(32, 96, 3, padding=1)
+        self.conv5 = nn.Conv2d(96, 96, 3, padding=1)
+        self.conv6 = nn.Conv2d(96, 96, 3, padding=1)
+
+        self.conv7 = nn.Conv2d(96, 192, 3, padding=1)
+        self.conv8 = nn.Conv2d(192, 192, 3, padding=1)
+        self.conv9 = nn.Conv2d(192, 192, 3)
 
         self.maxpool = nn.MaxPool2d(2, 2)
-        self.avgpool = nn.AvgPool2d(2, 2)
-        self.globalavgpool = nn.AvgPool2d(4, 4)
+        # self.avgpool = nn.AvgPool2d(2, 2)
+        # self.globalavgpool = nn.AvgPool2d(3, 3)
 
-        self.fc1 = nn.Linear(128 * 4 * 4, 10)
+        self.fc1 = nn.Linear(192 * 3 * 3, 768)
+        self.fc2 = nn.Linear(768, 10)
 
     def forward(self, x):
         # 第一个卷积块
@@ -59,7 +62,7 @@ class Net(nn.Module):
         x = F.relu(self.conv5(x))
         x = F.relu(self.conv6(x))
         x = self.maxpool(x)
-        x = nn.Dropout(0.2)(x)
+        # x = nn.Dropout(0.5)(x)
 
         # 第三个卷积块
         x = F.relu(self.conv7(x))
@@ -69,8 +72,9 @@ class Net(nn.Module):
         x = nn.Dropout(0.5)(x)
 
         x = x.view(x.size(0), -1)
-        x = nn.Dropout(0.5)(x)
         x = self.fc1(x)
+        x = nn.Dropout(0.5)(x)
+        x = self.fc2(x)
 
         return x
 
@@ -78,7 +82,7 @@ class Net(nn.Module):
         optimizer = optim.SGD(self.parameters(), momentum=0.9, lr=0.01)
         expLR = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.98)
         loss = nn.CrossEntropyLoss()
-        for epoch in range(60):  # loop over the dataset multiple times
+        for epoch in range(50):  # loop over the dataset multiple times
             timestart = time.time()
             running_loss = 0.0
             total = 0
@@ -104,7 +108,7 @@ class Net(nn.Module):
                 running_loss += l.item()
                 if i % 500 == 499:  # print every 100 mini-batches
                     print('[%d, %5d] loss: %.4f' %
-                          (epoch, (i+1)*(epoch+1), running_loss / 100))
+                          (epoch, (i+1)*100, running_loss / 100))
                     running_loss = 0.0
                     _, predicted = torch.max(outputs.data, 1)
                     total += labels.size(0)
