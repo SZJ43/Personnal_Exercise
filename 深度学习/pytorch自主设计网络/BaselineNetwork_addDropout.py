@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+# -- coding: utf-8 --
 import torch
 import torch.utils.data
 import torch.nn as nn
@@ -31,57 +33,58 @@ class Net(nn.Module):
         super(Net, self).__init__()
         self.conv1 = nn.Conv2d(3, 32, 3, padding=1)
         self.conv2 = nn.Conv2d(32, 32, 3, padding=1)
-        self.conv3 = nn.Conv2d(32, 64, 3, padding=1)
-        self.conv4 = nn.Conv2d(64, 64, 3, padding=1)  # 10*10
-        self.conv5 = nn.Conv2d(64, 128, 3, padding=1)
-        self.conv6 = nn.Conv2d(128, 128, 3, padding=1)
+        self.conv3 = nn.Conv2d(32, 32, 3, padding=1)
+
+        self.conv4 = nn.Conv2d(32, 96, 3, padding=1)
+        self.conv5 = nn.Conv2d(96, 96, 3, padding=1)
+        self.conv6 = nn.Conv2d(96, 96, 3, padding=1)
+
+        self.conv7 = nn.Conv2d(96, 192, 3, padding=1)
+        self.conv8 = nn.Conv2d(192, 192, 3, padding=1)
+        self.conv9 = nn.Conv2d(192, 192, 3)
 
         self.maxpool = nn.MaxPool2d(2, 2)
-        self.avgpool = nn.AvgPool2d(2, 2)
-        self.globalavgpool = nn.AvgPool2d(4, 4)
+        # self.avgpool = nn.AvgPool2d(2, 2)
+        # self.globalavgpool = nn.AvgPool2d(3, 3)
 
-        self.dropout20 = nn.Dropout(0.2)
-        self.dropout30 = nn.Dropout(0.3)
-        self.dropout40 = nn.Dropout(0.4)
-        self.dropout50 = nn.Dropout(0.5)
-
-        self.bn1 = nn.BatchNorm2d(32)
-        self.bn2 = nn.BatchNorm2d(64)
-        self.bn3 = nn.BatchNorm2d(128)
-
-        self.fc1 = nn.Linear(128 * 4 * 4, 10)
+        self.fc1 = nn.Linear(192 * 3 * 3, 10)
 
     def forward(self, x):
+        # 第一个卷积块
         x = F.relu(self.conv1(x))
         x = F.relu(self.conv2(x))
-        x = self.maxpool(x)
-        x = self.dropout20(x)
-
         x = F.relu(self.conv3(x))
-        x = F.relu(self.conv4(x))
         x = self.maxpool(x)
-        x = self.dropout30(x)
 
+        # 第二个卷积块
+        x = F.relu(self.conv4(x))
         x = F.relu(self.conv5(x))
         x = F.relu(self.conv6(x))
         x = self.maxpool(x)
-        x = self.dropout40(x)
+        x = nn.Dropout(0.2)(x)
+
+        # 第三个卷积块
+        x = F.relu(self.conv7(x))
+        x = F.relu(self.conv8(x))
+        x = F.relu(self.conv9(x))
+        x = self.maxpool(x)
+        x = nn.Dropout(0.5)(x)
 
         x = x.view(x.size(0), -1)
-        x = self.dropout50(x)
         x = self.fc1(x)
 
         return x
 
     def train_sgd(self, device):
-        optimizer = optim.SGD(self.parameters(), momentum=0.9, lr=0.001)
-        # torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[15, 30], gamma=0.1)
+        optimizer = optim.SGD(self.parameters(), momentum=0.9, lr=0.01)
+        expLR = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.98)
         loss = nn.CrossEntropyLoss()
-        for epoch in range(30):  # loop over the dataset multiple times
+        for epoch in range(45):  # loop over the dataset multiple times
             timestart = time.time()
             running_loss = 0.0
             total = 0
             correct = 0
+            expLR.step()
             for i, data in enumerate(trainloader, 0):
                 # get the inputs
                 inputs, labels = data
@@ -92,9 +95,6 @@ class Net(nn.Module):
 
                 # forward + backward + optimize
                 outputs = self(inputs)
-                # print(outputs.shape)
-                # print(labels.shape)
-                # input()
                 l = loss(outputs, labels)
                 l.backward()
                 optimizer.step()
@@ -103,15 +103,14 @@ class Net(nn.Module):
 
                 # print statistics
                 running_loss += l.item()
-                # print("i ", i)
-                if i == 99:  # print every 100 mini-batches
+                if i % 500 == 499:  # print every 100 mini-batches
                     print('[%d, %5d] loss: %.4f' %
-                          (epoch, i, running_loss / 100))
+                          (epoch, (i+1)*100, running_loss / 100))
                     running_loss = 0.0
                     _, predicted = torch.max(outputs.data, 1)
                     total += labels.size(0)
                     correct += (predicted == labels).sum().item()
-                    print('Accuracy of the network on the %d train images: %.3f %%' % (total, 100.0 * correct / total))
+                    print('Accuracy of the network on the %d train iterations: %.3f %%' % (total*5, 100.0 * correct / total))
 
                     torch.save({'epoch': epoch,
                                 'model_state_dict': net.state_dict(),
