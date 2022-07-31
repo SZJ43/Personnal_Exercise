@@ -1,4 +1,5 @@
 # -- coding: utf-8 --
+# -- coding: utf-8 --
 import torch
 import torch.utils.data
 import torch.nn as nn
@@ -33,9 +34,12 @@ class Net(nn.Module):
         self.conv1 = nn.Conv2d(3, 32, 3, padding=1)
         self.conv2 = nn.Conv2d(32, 32, 3, padding=1)
         self.conv3 = nn.Conv2d(32, 64, 3, padding=1)
-        self.conv4 = nn.Conv2d(64, 64, 3, padding=1)
+        self.conv4 = nn.Conv2d(64, 64, 3, padding=1)  # 10*10
         self.conv5 = nn.Conv2d(64, 128, 3, padding=1)
         self.conv6 = nn.Conv2d(128, 128, 3, padding=1)
+        self.conv7 = nn.Conv2d(128, 128, 3, padding=1)
+        self.conv8 = nn.Conv2d(128, 128, 3, padding=1)
+        self.conv9 = nn.Conv2d(128, 128, 3, padding=1)
 
         self.maxpool = nn.MaxPool2d(2, 2)
         self.avgpool = nn.AvgPool2d(2, 2)
@@ -47,21 +51,25 @@ class Net(nn.Module):
         # 第一个卷积块
         x = F.relu(self.conv1(x))
         x = F.relu(self.conv2(x))
+        x = F.relu(self.conv3(x))
         x = self.maxpool(x)
 
         # 第二个卷积块
-        x = F.relu(self.conv3(x))
         x = F.relu(self.conv4(x))
+        x = F.relu(self.conv5(x))
+        x = F.relu(self.conv6(x))
         x = self.maxpool(x)
         x = nn.Dropout(0.2)(x)
 
         # 第三个卷积块
-        x = F.relu(self.conv5(x))
-        x = F.relu(self.conv6(x))
+        x = F.relu(self.conv7(x))
+        x = F.relu(self.conv8(x))
+        x = F.relu(self.conv9(x))
         x = self.maxpool(x)
         x = nn.Dropout(0.5)(x)
 
         x = x.view(x.size(0), -1)
+        x = nn.Dropout(0.5)(x)
         x = self.fc1(x)
 
         return x
@@ -96,7 +104,7 @@ class Net(nn.Module):
                 running_loss += l.item()
                 if i % 500 == 499:  # print every 100 mini-batches
                     print('[%d, %5d] loss: %.4f' %
-                          (epoch, (i+1)*(epoch+1), running_loss / 100))
+                          (epoch, (i+1)*100, running_loss / 100))
                     running_loss = 0.0
                     _, predicted = torch.max(outputs.data, 1)
                     total += labels.size(0)
@@ -135,3 +143,4 @@ if __name__ == '__main__':
     net = net.to(device)
     net.train_sgd(device)
     net.test(device)
+
