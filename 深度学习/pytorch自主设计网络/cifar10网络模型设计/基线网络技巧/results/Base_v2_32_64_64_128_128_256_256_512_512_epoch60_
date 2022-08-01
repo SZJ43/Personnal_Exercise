@@ -1,0 +1,216 @@
+        self.fc1 = nn.Linear(512 * 3 * 3, 1280)
+        self.fc2 = nn.Linear(1280, 10)
+
+    def forward(self, x):
+        # 第一个卷积块
+        x = F.relu(self.conv1(x))
+        x = F.relu(self.conv2(x))
+        x = F.relu(self.conv3(x))
+        x = self.maxpool(x)
+
+        # 第二个卷积块
+        x = F.relu(self.conv4(x))
+        x = F.relu(self.conv5(x))
+        x = F.relu(self.conv6(x))
+        x = self.maxpool(x)
+
+        # 第三个卷积块
+        x = F.relu(self.conv7(x))
+        x = F.relu(self.conv8(x))
+        x = F.relu(self.conv9(x))
+        x = self.maxpool(x)
+
+        x = x.view(x.size(0), -1)
+
+        x = self.fc1(x)
+        x = self.fc2(x)
+
+        return x
+        
+        D:\Anaconda_v2\python.exe D:/pythonProject2/BaselineNetwork_v2.py 
+D:\Anaconda_v2\lib\site-packages\torch\optim\lr_scheduler.py:131: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+[0, 50000] loss: 11.5137
+Accuracy of the network on the 500 train iterations: 9.000 %
+epoch 0 cost 12.961770 sec
+[1, 50000] loss: 10.1176
+Accuracy of the network on the 500 train iterations: 39.000 %
+epoch 1 cost 10.948528 sec
+[2, 50000] loss: 8.1466
+Accuracy of the network on the 500 train iterations: 53.000 %
+epoch 2 cost 11.334363 sec
+[3, 50000] loss: 6.8799
+Accuracy of the network on the 500 train iterations: 49.000 %
+epoch 3 cost 11.430799 sec
+[4, 50000] loss: 5.7923
+Accuracy of the network on the 500 train iterations: 68.000 %
+epoch 4 cost 11.015201 sec
+[5, 50000] loss: 4.8300
+Accuracy of the network on the 500 train iterations: 76.000 %
+epoch 5 cost 11.180757 sec
+[6, 50000] loss: 4.0473
+Accuracy of the network on the 500 train iterations: 72.000 %
+epoch 6 cost 15.743778 sec
+[7, 50000] loss: 3.4120
+Accuracy of the network on the 500 train iterations: 75.000 %
+epoch 7 cost 17.663026 sec
+[8, 50000] loss: 2.8307
+Accuracy of the network on the 500 train iterations: 85.000 %
+epoch 8 cost 17.611912 sec
+[9, 50000] loss: 2.2108
+Accuracy of the network on the 500 train iterations: 84.000 %
+epoch 9 cost 17.274580 sec
+[10, 50000] loss: 1.6547
+Accuracy of the network on the 500 train iterations: 83.000 %
+epoch 10 cost 17.462042 sec
+[11, 50000] loss: 1.2013
+Accuracy of the network on the 500 train iterations: 83.000 %
+epoch 11 cost 17.265069 sec
+[12, 50000] loss: 0.8700
+Accuracy of the network on the 500 train iterations: 98.000 %
+epoch 12 cost 17.616805 sec
+[13, 50000] loss: 0.6892
+Accuracy of the network on the 500 train iterations: 95.000 %
+epoch 13 cost 17.490037 sec
+[14, 50000] loss: 0.5027
+Accuracy of the network on the 500 train iterations: 93.000 %
+epoch 14 cost 17.556005 sec
+[15, 50000] loss: 0.3946
+Accuracy of the network on the 500 train iterations: 95.000 %
+epoch 15 cost 17.444625 sec
+[16, 50000] loss: 0.3178
+Accuracy of the network on the 500 train iterations: 97.000 %
+epoch 16 cost 17.384868 sec
+[17, 50000] loss: 0.2811
+Accuracy of the network on the 500 train iterations: 98.000 %
+epoch 17 cost 17.468442 sec
+[18, 50000] loss: 0.2186
+Accuracy of the network on the 500 train iterations: 98.000 %
+epoch 18 cost 11.145169 sec
+[19, 50000] loss: 0.1749
+Accuracy of the network on the 500 train iterations: 97.000 %
+epoch 19 cost 16.937557 sec
+[20, 50000] loss: 0.1457
+Accuracy of the network on the 500 train iterations: 99.000 %
+epoch 20 cost 17.622509 sec
+[21, 50000] loss: 0.1101
+Accuracy of the network on the 500 train iterations: 98.000 %
+epoch 21 cost 15.974696 sec
+[22, 50000] loss: 0.0850
+Accuracy of the network on the 500 train iterations: 99.000 %
+epoch 22 cost 11.132171 sec
+[23, 50000] loss: 0.0698
+Accuracy of the network on the 500 train iterations: 99.000 %
+epoch 23 cost 11.460750 sec
+[24, 50000] loss: 0.0971
+Accuracy of the network on the 500 train iterations: 99.000 %
+epoch 24 cost 11.523967 sec
+[25, 50000] loss: 0.0291
+Accuracy of the network on the 500 train iterations: 98.000 %
+epoch 25 cost 11.106424 sec
+[26, 50000] loss: 0.0794
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 26 cost 11.185840 sec
+[27, 50000] loss: 0.0598
+Accuracy of the network on the 500 train iterations: 99.000 %
+epoch 27 cost 11.248658 sec
+[28, 50000] loss: 0.0296
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 28 cost 11.585411 sec
+[29, 50000] loss: 0.0309
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 29 cost 11.245049 sec
+[30, 50000] loss: 0.0227
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 30 cost 17.061775 sec
+[31, 50000] loss: 0.0123
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 31 cost 13.020770 sec
+[32, 50000] loss: 0.0089
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 32 cost 12.458342 sec
+[33, 50000] loss: 0.0041
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 33 cost 14.730296 sec
+[34, 50000] loss: 0.0003
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 34 cost 11.659791 sec
+[35, 50000] loss: 0.0001
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 35 cost 11.465434 sec
+[36, 50000] loss: 0.0001
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 36 cost 14.002214 sec
+[37, 50000] loss: 0.0001
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 37 cost 17.096359 sec
+[38, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 38 cost 17.126974 sec
+[39, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 39 cost 17.097073 sec
+[40, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 40 cost 17.129339 sec
+[41, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 41 cost 17.095330 sec
+[42, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 42 cost 17.086133 sec
+[43, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 43 cost 14.473564 sec
+[44, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 44 cost 11.027914 sec
+[45, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 45 cost 11.066767 sec
+[46, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 46 cost 11.116148 sec
+[47, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 47 cost 11.133996 sec
+[48, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 48 cost 11.145918 sec
+[49, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 49 cost 11.142629 sec
+[50, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 50 cost 11.174538 sec
+[51, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 51 cost 11.170598 sec
+[52, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 52 cost 11.168249 sec
+[53, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 53 cost 11.181452 sec
+[54, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 54 cost 11.206165 sec
+[55, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 55 cost 11.158359 sec
+[56, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 56 cost 11.183038 sec
+[57, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 57 cost 11.219830 sec
+[58, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 58 cost 11.175319 sec
+[59, 50000] loss: 0.0000
+Accuracy of the network on the 500 train iterations: 100.000 %
+epoch 59 cost 11.216394 sec
+Finished Training
+Accuracy of the network on the 10000 test images: 77.040 %
+
+进程已结束,退出代码0
