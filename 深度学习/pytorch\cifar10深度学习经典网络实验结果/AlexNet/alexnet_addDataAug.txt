@@ -1,0 +1,1457 @@
+transform_train = transforms.Compose([
+    transforms.Resize((227, 227)),
+    transforms.RandomCrop(227),
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor(),
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+])
+
+transform_test = transforms.Compose([
+    transforms.Resize((227, 227)),
+    transforms.ToTensor(),
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+])
+
+####
+
+D:\Anaconda_v2\python.exe D:/code/pytorch-cifar-master/main.py 
+==> Preparing data..
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+
+Epoch: 0
+D:\Anaconda_v2\lib\site-packages\torch\optim\lr_scheduler.py:131: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+[0, 10000] loss: 2.3026
+Accuracy of the network on the 10000 train images: 9.693 %
+[0, 20000] loss: 2.2683
+Accuracy of the network on the 10000 train images: 10.970 %
+[0, 30000] loss: 2.1258
+Accuracy of the network on the 10000 train images: 13.541 %
+[0, 40000] loss: 2.0181
+Accuracy of the network on the 10000 train images: 14.953 %
+[0, 50000] loss: 1.9459
+Accuracy of the network on the 10000 train images: 16.455 %
+[0, 10000] loss: 1.8501
+Accuracy of the network on the 10000 test images: 23.693 %
+Saving..
+
+Epoch: 1
+[1, 10000] loss: 1.8774
+Accuracy of the network on the 10000 train images: 26.238 %
+[1, 20000] loss: 1.8468
+Accuracy of the network on the 10000 train images: 26.668 %
+[1, 30000] loss: 1.7536
+Accuracy of the network on the 10000 train images: 28.099 %
+[1, 40000] loss: 1.7233
+Accuracy of the network on the 10000 train images: 29.240 %
+[1, 50000] loss: 1.7062
+Accuracy of the network on the 10000 train images: 29.931 %
+[1, 10000] loss: 1.6396
+Accuracy of the network on the 10000 test images: 34.139 %
+Saving..
+
+Epoch: 2
+[2, 10000] loss: 1.6456
+Accuracy of the network on the 10000 train images: 35.743 %
+[2, 20000] loss: 1.6277
+Accuracy of the network on the 10000 train images: 36.074 %
+[2, 30000] loss: 1.6306
+Accuracy of the network on the 10000 train images: 36.333 %
+[2, 40000] loss: 1.5310
+Accuracy of the network on the 10000 train images: 37.587 %
+[2, 50000] loss: 1.5376
+Accuracy of the network on the 10000 train images: 38.232 %
+[2, 10000] loss: 1.4459
+Accuracy of the network on the 10000 test images: 44.069 %
+Saving..
+
+Epoch: 3
+[3, 10000] loss: 1.4626
+Accuracy of the network on the 10000 train images: 44.079 %
+[3, 20000] loss: 1.4664
+Accuracy of the network on the 10000 train images: 44.173 %
+[3, 30000] loss: 1.4051
+Accuracy of the network on the 10000 train images: 45.007 %
+[3, 40000] loss: 1.3436
+Accuracy of the network on the 10000 train images: 46.156 %
+[3, 50000] loss: 1.3732
+Accuracy of the network on the 10000 train images: 46.554 %
+[3, 10000] loss: 1.2804
+Accuracy of the network on the 10000 test images: 52.525 %
+Saving..
+
+Epoch: 4
+[4, 10000] loss: 1.3105
+Accuracy of the network on the 10000 train images: 51.386 %
+[4, 20000] loss: 1.2632
+Accuracy of the network on the 10000 train images: 52.233 %
+[4, 30000] loss: 1.2485
+Accuracy of the network on the 10000 train images: 52.799 %
+[4, 40000] loss: 1.2256
+Accuracy of the network on the 10000 train images: 53.507 %
+[4, 50000] loss: 1.1926
+Accuracy of the network on the 10000 train images: 54.093 %
+[4, 10000] loss: 1.1489
+Accuracy of the network on the 10000 test images: 58.208 %
+Saving..
+
+Epoch: 5
+[5, 10000] loss: 1.1196
+Accuracy of the network on the 10000 train images: 59.059 %
+[5, 20000] loss: 1.1097
+Accuracy of the network on the 10000 train images: 59.183 %
+[5, 30000] loss: 1.1043
+Accuracy of the network on the 10000 train images: 59.515 %
+[5, 40000] loss: 1.0612
+Accuracy of the network on the 10000 train images: 59.943 %
+[5, 50000] loss: 1.0629
+Accuracy of the network on the 10000 train images: 60.325 %
+[5, 10000] loss: 0.9591
+Accuracy of the network on the 10000 test images: 65.277 %
+Saving..
+
+Epoch: 6
+[6, 10000] loss: 0.9785
+Accuracy of the network on the 10000 train images: 65.347 %
+[6, 20000] loss: 1.0099
+Accuracy of the network on the 10000 train images: 64.584 %
+[6, 30000] loss: 0.9574
+Accuracy of the network on the 10000 train images: 64.776 %
+[6, 40000] loss: 0.9609
+Accuracy of the network on the 10000 train images: 65.151 %
+[6, 50000] loss: 0.9522
+Accuracy of the network on the 10000 train images: 65.341 %
+[6, 10000] loss: 0.8998
+Accuracy of the network on the 10000 test images: 66.832 %
+Saving..
+
+Epoch: 7
+[7, 10000] loss: 0.9121
+Accuracy of the network on the 10000 train images: 66.812 %
+[7, 20000] loss: 0.9125
+Accuracy of the network on the 10000 train images: 66.842 %
+[7, 30000] loss: 0.8836
+Accuracy of the network on the 10000 train images: 67.337 %
+[7, 40000] loss: 0.8591
+Accuracy of the network on the 10000 train images: 67.918 %
+[7, 50000] loss: 0.8716
+Accuracy of the network on the 10000 train images: 68.069 %
+[7, 10000] loss: 0.7915
+Accuracy of the network on the 10000 test images: 71.574 %
+Saving..
+
+Epoch: 8
+[8, 10000] loss: 0.8286
+Accuracy of the network on the 10000 train images: 70.386 %
+[8, 20000] loss: 0.8067
+Accuracy of the network on the 10000 train images: 71.074 %
+[8, 30000] loss: 0.7948
+Accuracy of the network on the 10000 train images: 71.446 %
+[8, 40000] loss: 0.8114
+Accuracy of the network on the 10000 train images: 71.455 %
+[8, 50000] loss: 0.7770
+Accuracy of the network on the 10000 train images: 71.659 %
+[8, 10000] loss: 0.8032
+Accuracy of the network on the 10000 test images: 71.614 %
+Saving..
+
+Epoch: 9
+[9, 10000] loss: 0.7396
+Accuracy of the network on the 10000 train images: 73.782 %
+[9, 20000] loss: 0.7645
+Accuracy of the network on the 10000 train images: 73.500 %
+[9, 30000] loss: 0.7386
+Accuracy of the network on the 10000 train images: 73.541 %
+[9, 40000] loss: 0.7278
+Accuracy of the network on the 10000 train images: 73.881 %
+[9, 50000] loss: 0.7391
+Accuracy of the network on the 10000 train images: 74.038 %
+[9, 10000] loss: 0.7483
+Accuracy of the network on the 10000 test images: 74.000 %
+Saving..
+
+Epoch: 10
+[10, 10000] loss: 0.6921
+Accuracy of the network on the 10000 train images: 75.782 %
+[10, 20000] loss: 0.6883
+Accuracy of the network on the 10000 train images: 75.792 %
+[10, 30000] loss: 0.6705
+Accuracy of the network on the 10000 train images: 76.257 %
+[10, 40000] loss: 0.6675
+Accuracy of the network on the 10000 train images: 76.498 %
+[10, 50000] loss: 0.6850
+Accuracy of the network on the 10000 train images: 76.426 %
+[10, 10000] loss: 0.6870
+Accuracy of the network on the 10000 test images: 76.584 %
+Saving..
+
+Epoch: 11
+[11, 10000] loss: 0.6307
+Accuracy of the network on the 10000 train images: 78.307 %
+[11, 20000] loss: 0.6359
+Accuracy of the network on the 10000 train images: 78.114 %
+[11, 30000] loss: 0.6177
+Accuracy of the network on the 10000 train images: 78.116 %
+[11, 40000] loss: 0.6137
+Accuracy of the network on the 10000 train images: 78.245 %
+[11, 50000] loss: 0.6202
+Accuracy of the network on the 10000 train images: 78.335 %
+[11, 10000] loss: 0.6383
+Accuracy of the network on the 10000 test images: 78.178 %
+Saving..
+
+Epoch: 12
+[12, 10000] loss: 0.5981
+Accuracy of the network on the 10000 train images: 79.297 %
+[12, 20000] loss: 0.5923
+Accuracy of the network on the 10000 train images: 79.322 %
+[12, 30000] loss: 0.5905
+Accuracy of the network on the 10000 train images: 79.327 %
+[12, 40000] loss: 0.5862
+Accuracy of the network on the 10000 train images: 79.389 %
+[12, 50000] loss: 0.5827
+Accuracy of the network on the 10000 train images: 79.485 %
+[12, 10000] loss: 0.5741
+Accuracy of the network on the 10000 test images: 80.158 %
+Saving..
+
+Epoch: 13
+[13, 10000] loss: 0.5198
+Accuracy of the network on the 10000 train images: 82.059 %
+[13, 20000] loss: 0.5242
+Accuracy of the network on the 10000 train images: 82.094 %
+[13, 30000] loss: 0.5547
+Accuracy of the network on the 10000 train images: 81.677 %
+[13, 40000] loss: 0.5657
+Accuracy of the network on the 10000 train images: 81.406 %
+[13, 50000] loss: 0.5622
+Accuracy of the network on the 10000 train images: 81.339 %
+[13, 10000] loss: 0.6350
+Accuracy of the network on the 10000 test images: 78.277 %
+
+Epoch: 14
+[14, 10000] loss: 0.5142
+Accuracy of the network on the 10000 train images: 82.515 %
+[14, 20000] loss: 0.5135
+Accuracy of the network on the 10000 train images: 82.312 %
+[14, 30000] loss: 0.5189
+Accuracy of the network on the 10000 train images: 82.228 %
+[14, 40000] loss: 0.4959
+Accuracy of the network on the 10000 train images: 82.460 %
+[14, 50000] loss: 0.5131
+Accuracy of the network on the 10000 train images: 82.463 %
+[14, 10000] loss: 0.6278
+Accuracy of the network on the 10000 test images: 78.505 %
+
+Epoch: 15
+[15, 10000] loss: 0.4762
+Accuracy of the network on the 10000 train images: 83.752 %
+[15, 20000] loss: 0.4756
+Accuracy of the network on the 10000 train images: 83.564 %
+[15, 30000] loss: 0.4613
+Accuracy of the network on the 10000 train images: 83.719 %
+[15, 40000] loss: 0.5139
+Accuracy of the network on the 10000 train images: 83.438 %
+[15, 50000] loss: 0.4750
+Accuracy of the network on the 10000 train images: 83.497 %
+[15, 10000] loss: 0.5367
+Accuracy of the network on the 10000 test images: 82.000 %
+Saving..
+
+Epoch: 16
+[16, 10000] loss: 0.4292
+Accuracy of the network on the 10000 train images: 85.050 %
+[16, 20000] loss: 0.4560
+Accuracy of the network on the 10000 train images: 84.832 %
+[16, 30000] loss: 0.4593
+Accuracy of the network on the 10000 train images: 84.571 %
+[16, 40000] loss: 0.4587
+Accuracy of the network on the 10000 train images: 84.547 %
+[16, 50000] loss: 0.4619
+Accuracy of the network on the 10000 train images: 84.406 %
+[16, 10000] loss: 0.5475
+Accuracy of the network on the 10000 test images: 81.743 %
+
+Epoch: 17
+[17, 10000] loss: 0.4322
+Accuracy of the network on the 10000 train images: 85.327 %
+[17, 20000] loss: 0.4010
+Accuracy of the network on the 10000 train images: 85.936 %
+[17, 30000] loss: 0.4400
+Accuracy of the network on the 10000 train images: 85.472 %
+[17, 40000] loss: 0.4429
+Accuracy of the network on the 10000 train images: 85.282 %
+[17, 50000] loss: 0.4136
+Accuracy of the network on the 10000 train images: 85.410 %
+[17, 10000] loss: 0.5382
+Accuracy of the network on the 10000 test images: 82.089 %
+Saving..
+
+Epoch: 18
+[18, 10000] loss: 0.3746
+Accuracy of the network on the 10000 train images: 87.139 %
+[18, 20000] loss: 0.3957
+Accuracy of the network on the 10000 train images: 86.896 %
+[18, 30000] loss: 0.4026
+Accuracy of the network on the 10000 train images: 86.693 %
+[18, 40000] loss: 0.3921
+Accuracy of the network on the 10000 train images: 86.688 %
+[18, 50000] loss: 0.4062
+Accuracy of the network on the 10000 train images: 86.584 %
+[18, 10000] loss: 0.5245
+Accuracy of the network on the 10000 test images: 82.525 %
+Saving..
+
+Epoch: 19
+[19, 10000] loss: 0.3488
+Accuracy of the network on the 10000 train images: 88.347 %
+[19, 20000] loss: 0.3670
+Accuracy of the network on the 10000 train images: 88.000 %
+[19, 30000] loss: 0.3762
+Accuracy of the network on the 10000 train images: 87.700 %
+[19, 40000] loss: 0.3918
+Accuracy of the network on the 10000 train images: 87.428 %
+[19, 50000] loss: 0.3658
+Accuracy of the network on the 10000 train images: 87.416 %
+[19, 10000] loss: 0.5201
+Accuracy of the network on the 10000 test images: 82.634 %
+Saving..
+
+Epoch: 20
+[20, 10000] loss: 0.3188
+Accuracy of the network on the 10000 train images: 89.168 %
+[20, 20000] loss: 0.3353
+Accuracy of the network on the 10000 train images: 88.802 %
+[20, 30000] loss: 0.3602
+Accuracy of the network on the 10000 train images: 88.383 %
+[20, 40000] loss: 0.3552
+Accuracy of the network on the 10000 train images: 88.255 %
+[20, 50000] loss: 0.3588
+Accuracy of the network on the 10000 train images: 88.139 %
+[20, 10000] loss: 0.5543
+Accuracy of the network on the 10000 test images: 82.069 %
+
+Epoch: 21
+[21, 10000] loss: 0.3095
+Accuracy of the network on the 10000 train images: 89.525 %
+[21, 20000] loss: 0.3322
+Accuracy of the network on the 10000 train images: 88.946 %
+[21, 30000] loss: 0.3497
+Accuracy of the network on the 10000 train images: 88.743 %
+[21, 40000] loss: 0.3225
+Accuracy of the network on the 10000 train images: 88.869 %
+[21, 50000] loss: 0.3307
+Accuracy of the network on the 10000 train images: 88.850 %
+[21, 10000] loss: 0.5104
+Accuracy of the network on the 10000 test images: 83.693 %
+Saving..
+
+Epoch: 22
+[22, 10000] loss: 0.3062
+Accuracy of the network on the 10000 train images: 89.535 %
+[22, 20000] loss: 0.2878
+Accuracy of the network on the 10000 train images: 89.926 %
+[22, 30000] loss: 0.3143
+Accuracy of the network on the 10000 train images: 89.729 %
+[22, 40000] loss: 0.3157
+Accuracy of the network on the 10000 train images: 89.631 %
+[22, 50000] loss: 0.3325
+Accuracy of the network on the 10000 train images: 89.400 %
+[22, 10000] loss: 0.5345
+Accuracy of the network on the 10000 test images: 82.812 %
+
+Epoch: 23
+[23, 10000] loss: 0.2854
+Accuracy of the network on the 10000 train images: 90.178 %
+[23, 20000] loss: 0.2989
+Accuracy of the network on the 10000 train images: 89.861 %
+[23, 30000] loss: 0.3059
+Accuracy of the network on the 10000 train images: 89.779 %
+[23, 40000] loss: 0.2901
+Accuracy of the network on the 10000 train images: 89.938 %
+[23, 50000] loss: 0.2856
+Accuracy of the network on the 10000 train images: 89.970 %
+[23, 10000] loss: 0.5130
+Accuracy of the network on the 10000 test images: 84.000 %
+Saving..
+
+Epoch: 24
+[24, 10000] loss: 0.2323
+Accuracy of the network on the 10000 train images: 92.149 %
+[24, 20000] loss: 0.2586
+Accuracy of the network on the 10000 train images: 91.748 %
+[24, 30000] loss: 0.2846
+Accuracy of the network on the 10000 train images: 91.300 %
+[24, 40000] loss: 0.2745
+Accuracy of the network on the 10000 train images: 91.059 %
+[24, 50000] loss: 0.2851
+Accuracy of the network on the 10000 train images: 90.865 %
+[24, 10000] loss: 0.4956
+Accuracy of the network on the 10000 test images: 84.218 %
+Saving..
+
+Epoch: 25
+[25, 10000] loss: 0.2491
+Accuracy of the network on the 10000 train images: 91.980 %
+[25, 20000] loss: 0.2427
+Accuracy of the network on the 10000 train images: 91.757 %
+[25, 30000] loss: 0.2418
+Accuracy of the network on the 10000 train images: 91.766 %
+[25, 40000] loss: 0.2610
+Accuracy of the network on the 10000 train images: 91.574 %
+[25, 50000] loss: 0.2753
+Accuracy of the network on the 10000 train images: 91.388 %
+[25, 10000] loss: 0.5280
+Accuracy of the network on the 10000 test images: 83.455 %
+
+Epoch: 26
+[26, 10000] loss: 0.2206
+Accuracy of the network on the 10000 train images: 92.396 %
+[26, 20000] loss: 0.2432
+Accuracy of the network on the 10000 train images: 92.139 %
+[26, 30000] loss: 0.2317
+Accuracy of the network on the 10000 train images: 92.152 %
+[26, 40000] loss: 0.2480
+Accuracy of the network on the 10000 train images: 91.973 %
+[26, 50000] loss: 0.2480
+Accuracy of the network on the 10000 train images: 91.844 %
+[26, 10000] loss: 0.5705
+Accuracy of the network on the 10000 test images: 82.693 %
+
+Epoch: 27
+[27, 10000] loss: 0.2145
+Accuracy of the network on the 10000 train images: 92.644 %
+[27, 20000] loss: 0.2190
+Accuracy of the network on the 10000 train images: 92.515 %
+[27, 30000] loss: 0.2194
+Accuracy of the network on the 10000 train images: 92.459 %
+[27, 40000] loss: 0.2273
+Accuracy of the network on the 10000 train images: 92.396 %
+[27, 50000] loss: 0.2379
+Accuracy of the network on the 10000 train images: 92.269 %
+[27, 10000] loss: 0.5230
+Accuracy of the network on the 10000 test images: 84.139 %
+
+Epoch: 28
+[28, 10000] loss: 0.1851
+Accuracy of the network on the 10000 train images: 93.347 %
+[28, 20000] loss: 0.1883
+Accuracy of the network on the 10000 train images: 93.436 %
+[28, 30000] loss: 0.2240
+Accuracy of the network on the 10000 train images: 93.043 %
+[28, 40000] loss: 0.2077
+Accuracy of the network on the 10000 train images: 92.955 %
+[28, 50000] loss: 0.2249
+Accuracy of the network on the 10000 train images: 92.832 %
+[28, 10000] loss: 0.5162
+Accuracy of the network on the 10000 test images: 84.119 %
+
+Epoch: 29
+[29, 10000] loss: 0.2049
+Accuracy of the network on the 10000 train images: 93.089 %
+[29, 20000] loss: 0.2023
+Accuracy of the network on the 10000 train images: 93.129 %
+[29, 30000] loss: 0.1951
+Accuracy of the network on the 10000 train images: 93.178 %
+[29, 40000] loss: 0.1877
+Accuracy of the network on the 10000 train images: 93.275 %
+[29, 50000] loss: 0.2109
+Accuracy of the network on the 10000 train images: 93.200 %
+[29, 10000] loss: 0.5446
+Accuracy of the network on the 10000 test images: 83.653 %
+
+Epoch: 30
+[30, 10000] loss: 0.1640
+Accuracy of the network on the 10000 train images: 94.267 %
+[30, 20000] loss: 0.1758
+Accuracy of the network on the 10000 train images: 94.045 %
+[30, 30000] loss: 0.1815
+Accuracy of the network on the 10000 train images: 93.993 %
+[30, 40000] loss: 0.2055
+Accuracy of the network on the 10000 train images: 93.663 %
+[30, 50000] loss: 0.2015
+Accuracy of the network on the 10000 train images: 93.511 %
+[30, 10000] loss: 0.5113
+Accuracy of the network on the 10000 test images: 84.178 %
+
+Epoch: 31
+[31, 10000] loss: 0.1537
+Accuracy of the network on the 10000 train images: 94.752 %
+[31, 20000] loss: 0.1724
+Accuracy of the network on the 10000 train images: 94.480 %
+[31, 30000] loss: 0.1782
+Accuracy of the network on the 10000 train images: 94.238 %
+[31, 40000] loss: 0.1812
+Accuracy of the network on the 10000 train images: 94.126 %
+[31, 50000] loss: 0.1796
+Accuracy of the network on the 10000 train images: 94.119 %
+[31, 10000] loss: 0.5494
+Accuracy of the network on the 10000 test images: 84.614 %
+Saving..
+
+Epoch: 32
+[32, 10000] loss: 0.1366
+Accuracy of the network on the 10000 train images: 95.465 %
+[32, 20000] loss: 0.1791
+Accuracy of the network on the 10000 train images: 94.599 %
+[32, 30000] loss: 0.1692
+Accuracy of the network on the 10000 train images: 94.469 %
+[32, 40000] loss: 0.1711
+Accuracy of the network on the 10000 train images: 94.332 %
+[32, 50000] loss: 0.1752
+Accuracy of the network on the 10000 train images: 94.279 %
+[32, 10000] loss: 0.5332
+Accuracy of the network on the 10000 test images: 84.554 %
+
+Epoch: 33
+[33, 10000] loss: 0.1437
+Accuracy of the network on the 10000 train images: 95.119 %
+[33, 20000] loss: 0.1538
+Accuracy of the network on the 10000 train images: 94.946 %
+[33, 30000] loss: 0.1606
+Accuracy of the network on the 10000 train images: 94.680 %
+[33, 40000] loss: 0.1678
+Accuracy of the network on the 10000 train images: 94.579 %
+[33, 50000] loss: 0.1766
+Accuracy of the network on the 10000 train images: 94.465 %
+[33, 10000] loss: 0.5788
+Accuracy of the network on the 10000 test images: 83.792 %
+
+Epoch: 34
+[34, 10000] loss: 0.1412
+Accuracy of the network on the 10000 train images: 95.198 %
+[34, 20000] loss: 0.1345
+Accuracy of the network on the 10000 train images: 95.277 %
+[34, 30000] loss: 0.1268
+Accuracy of the network on the 10000 train images: 95.426 %
+[34, 40000] loss: 0.1545
+Accuracy of the network on the 10000 train images: 95.238 %
+[34, 50000] loss: 0.1571
+Accuracy of the network on the 10000 train images: 95.083 %
+[34, 10000] loss: 0.5447
+Accuracy of the network on the 10000 test images: 84.614 %
+
+Epoch: 35
+[35, 10000] loss: 0.1274
+Accuracy of the network on the 10000 train images: 95.812 %
+[35, 20000] loss: 0.1305
+Accuracy of the network on the 10000 train images: 95.644 %
+[35, 30000] loss: 0.1276
+Accuracy of the network on the 10000 train images: 95.614 %
+[35, 40000] loss: 0.1257
+Accuracy of the network on the 10000 train images: 95.649 %
+[35, 50000] loss: 0.1346
+Accuracy of the network on the 10000 train images: 95.610 %
+[35, 10000] loss: 0.5740
+Accuracy of the network on the 10000 test images: 84.149 %
+
+Epoch: 36
+[36, 10000] loss: 0.1041
+Accuracy of the network on the 10000 train images: 96.762 %
+[36, 20000] loss: 0.1300
+Accuracy of the network on the 10000 train images: 96.218 %
+[36, 30000] loss: 0.1262
+Accuracy of the network on the 10000 train images: 96.046 %
+[36, 40000] loss: 0.1191
+Accuracy of the network on the 10000 train images: 96.005 %
+[36, 50000] loss: 0.1311
+Accuracy of the network on the 10000 train images: 95.917 %
+[36, 10000] loss: 0.6259
+Accuracy of the network on the 10000 test images: 83.950 %
+
+Epoch: 37
+[37, 10000] loss: 0.1114
+Accuracy of the network on the 10000 train images: 96.109 %
+[37, 20000] loss: 0.1157
+Accuracy of the network on the 10000 train images: 96.158 %
+[37, 30000] loss: 0.1285
+Accuracy of the network on the 10000 train images: 96.033 %
+[37, 40000] loss: 0.1158
+Accuracy of the network on the 10000 train images: 96.022 %
+[37, 50000] loss: 0.1210
+Accuracy of the network on the 10000 train images: 95.978 %
+[37, 10000] loss: 0.5954
+Accuracy of the network on the 10000 test images: 84.752 %
+Saving..
+
+Epoch: 38
+[38, 10000] loss: 0.1017
+Accuracy of the network on the 10000 train images: 96.505 %
+[38, 20000] loss: 0.1195
+Accuracy of the network on the 10000 train images: 96.243 %
+[38, 30000] loss: 0.1185
+Accuracy of the network on the 10000 train images: 96.149 %
+[38, 40000] loss: 0.1067
+Accuracy of the network on the 10000 train images: 96.200 %
+[38, 50000] loss: 0.1086
+Accuracy of the network on the 10000 train images: 96.246 %
+[38, 10000] loss: 0.5595
+Accuracy of the network on the 10000 test images: 85.861 %
+Saving..
+
+Epoch: 39
+[39, 10000] loss: 0.0870
+Accuracy of the network on the 10000 train images: 96.911 %
+[39, 20000] loss: 0.0983
+Accuracy of the network on the 10000 train images: 96.797 %
+[39, 30000] loss: 0.0901
+Accuracy of the network on the 10000 train images: 96.842 %
+[39, 40000] loss: 0.1081
+Accuracy of the network on the 10000 train images: 96.720 %
+[39, 50000] loss: 0.1086
+Accuracy of the network on the 10000 train images: 96.675 %
+[39, 10000] loss: 0.5638
+Accuracy of the network on the 10000 test images: 84.822 %
+
+Epoch: 40
+[40, 10000] loss: 0.0834
+Accuracy of the network on the 10000 train images: 97.228 %
+[40, 20000] loss: 0.0962
+Accuracy of the network on the 10000 train images: 96.926 %
+[40, 30000] loss: 0.0939
+Accuracy of the network on the 10000 train images: 96.947 %
+[40, 40000] loss: 0.1021
+Accuracy of the network on the 10000 train images: 96.802 %
+[40, 50000] loss: 0.1079
+Accuracy of the network on the 10000 train images: 96.717 %
+[40, 10000] loss: 0.5815
+Accuracy of the network on the 10000 test images: 84.594 %
+
+Epoch: 41
+[41, 10000] loss: 0.0929
+Accuracy of the network on the 10000 train images: 96.851 %
+[41, 20000] loss: 0.0891
+Accuracy of the network on the 10000 train images: 96.936 %
+[41, 30000] loss: 0.0970
+Accuracy of the network on the 10000 train images: 96.865 %
+[41, 40000] loss: 0.0894
+Accuracy of the network on the 10000 train images: 96.941 %
+[41, 50000] loss: 0.0970
+Accuracy of the network on the 10000 train images: 96.903 %
+[41, 10000] loss: 0.5518
+Accuracy of the network on the 10000 test images: 85.663 %
+
+Epoch: 42
+[42, 10000] loss: 0.0719
+Accuracy of the network on the 10000 train images: 97.733 %
+[42, 20000] loss: 0.0711
+Accuracy of the network on the 10000 train images: 97.668 %
+[42, 30000] loss: 0.0800
+Accuracy of the network on the 10000 train images: 97.545 %
+[42, 40000] loss: 0.0818
+Accuracy of the network on the 10000 train images: 97.512 %
+[42, 50000] loss: 0.0858
+Accuracy of the network on the 10000 train images: 97.428 %
+[42, 10000] loss: 0.5639
+Accuracy of the network on the 10000 test images: 85.347 %
+
+Epoch: 43
+[43, 10000] loss: 0.0624
+Accuracy of the network on the 10000 train images: 98.129 %
+[43, 20000] loss: 0.0766
+Accuracy of the network on the 10000 train images: 97.822 %
+[43, 30000] loss: 0.0676
+Accuracy of the network on the 10000 train images: 97.822 %
+[43, 40000] loss: 0.0803
+Accuracy of the network on the 10000 train images: 97.651 %
+[43, 50000] loss: 0.0807
+Accuracy of the network on the 10000 train images: 97.582 %
+[43, 10000] loss: 0.5827
+Accuracy of the network on the 10000 test images: 85.505 %
+
+Epoch: 44
+[44, 10000] loss: 0.0635
+Accuracy of the network on the 10000 train images: 97.950 %
+[44, 20000] loss: 0.0614
+Accuracy of the network on the 10000 train images: 97.911 %
+[44, 30000] loss: 0.0710
+Accuracy of the network on the 10000 train images: 97.842 %
+[44, 40000] loss: 0.0784
+Accuracy of the network on the 10000 train images: 97.755 %
+[44, 50000] loss: 0.0899
+Accuracy of the network on the 10000 train images: 97.604 %
+[44, 10000] loss: 0.6274
+Accuracy of the network on the 10000 test images: 84.525 %
+
+Epoch: 45
+[45, 10000] loss: 0.0687
+Accuracy of the network on the 10000 train images: 97.743 %
+[45, 20000] loss: 0.0662
+Accuracy of the network on the 10000 train images: 97.817 %
+[45, 30000] loss: 0.0775
+Accuracy of the network on the 10000 train images: 97.650 %
+[45, 40000] loss: 0.0725
+Accuracy of the network on the 10000 train images: 97.631 %
+[45, 50000] loss: 0.0710
+Accuracy of the network on the 10000 train images: 97.648 %
+[45, 10000] loss: 0.5973
+Accuracy of the network on the 10000 test images: 85.713 %
+
+Epoch: 46
+[46, 10000] loss: 0.0519
+Accuracy of the network on the 10000 train images: 98.337 %
+[46, 20000] loss: 0.0616
+Accuracy of the network on the 10000 train images: 98.149 %
+[46, 30000] loss: 0.0607
+Accuracy of the network on the 10000 train images: 98.142 %
+[46, 40000] loss: 0.0711
+Accuracy of the network on the 10000 train images: 98.027 %
+[46, 50000] loss: 0.0709
+Accuracy of the network on the 10000 train images: 97.923 %
+[46, 10000] loss: 0.6684
+Accuracy of the network on the 10000 test images: 84.505 %
+
+Epoch: 47
+[47, 10000] loss: 0.0523
+Accuracy of the network on the 10000 train images: 98.307 %
+[47, 20000] loss: 0.0453
+Accuracy of the network on the 10000 train images: 98.441 %
+[47, 30000] loss: 0.0528
+Accuracy of the network on the 10000 train images: 98.396 %
+[47, 40000] loss: 0.0483
+Accuracy of the network on the 10000 train images: 98.403 %
+[47, 50000] loss: 0.0606
+Accuracy of the network on the 10000 train images: 98.323 %
+[47, 10000] loss: 0.5549
+Accuracy of the network on the 10000 test images: 86.050 %
+Saving..
+
+Epoch: 48
+[48, 10000] loss: 0.0494
+Accuracy of the network on the 10000 train images: 98.515 %
+[48, 20000] loss: 0.0541
+Accuracy of the network on the 10000 train images: 98.376 %
+[48, 30000] loss: 0.0516
+Accuracy of the network on the 10000 train images: 98.366 %
+[48, 40000] loss: 0.0616
+Accuracy of the network on the 10000 train images: 98.257 %
+[48, 50000] loss: 0.0613
+Accuracy of the network on the 10000 train images: 98.180 %
+[48, 10000] loss: 0.6414
+Accuracy of the network on the 10000 test images: 84.861 %
+
+Epoch: 49
+[49, 10000] loss: 0.0514
+Accuracy of the network on the 10000 train images: 98.356 %
+[49, 20000] loss: 0.0546
+Accuracy of the network on the 10000 train images: 98.188 %
+[49, 30000] loss: 0.0557
+Accuracy of the network on the 10000 train images: 98.188 %
+[49, 40000] loss: 0.0470
+Accuracy of the network on the 10000 train images: 98.277 %
+[49, 50000] loss: 0.0497
+Accuracy of the network on the 10000 train images: 98.337 %
+[49, 10000] loss: 0.6225
+Accuracy of the network on the 10000 test images: 85.238 %
+
+Epoch: 50
+[50, 10000] loss: 0.0462
+Accuracy of the network on the 10000 train images: 98.644 %
+[50, 20000] loss: 0.0425
+Accuracy of the network on the 10000 train images: 98.644 %
+[50, 30000] loss: 0.0508
+Accuracy of the network on the 10000 train images: 98.558 %
+[50, 40000] loss: 0.0493
+Accuracy of the network on the 10000 train images: 98.530 %
+[50, 50000] loss: 0.0467
+Accuracy of the network on the 10000 train images: 98.505 %
+[50, 10000] loss: 0.6303
+Accuracy of the network on the 10000 test images: 84.931 %
+
+Epoch: 51
+[51, 10000] loss: 0.0460
+Accuracy of the network on the 10000 train images: 98.495 %
+[51, 20000] loss: 0.0468
+Accuracy of the network on the 10000 train images: 98.446 %
+[51, 30000] loss: 0.0472
+Accuracy of the network on the 10000 train images: 98.462 %
+[51, 40000] loss: 0.0447
+Accuracy of the network on the 10000 train images: 98.483 %
+[51, 50000] loss: 0.0427
+Accuracy of the network on the 10000 train images: 98.531 %
+[51, 10000] loss: 0.5847
+Accuracy of the network on the 10000 test images: 85.960 %
+
+Epoch: 52
+[52, 10000] loss: 0.0348
+Accuracy of the network on the 10000 train images: 99.030 %
+[52, 20000] loss: 0.0356
+Accuracy of the network on the 10000 train images: 99.035 %
+[52, 30000] loss: 0.0379
+Accuracy of the network on the 10000 train images: 98.974 %
+[52, 40000] loss: 0.0361
+Accuracy of the network on the 10000 train images: 98.941 %
+[52, 50000] loss: 0.0462
+Accuracy of the network on the 10000 train images: 98.840 %
+[52, 10000] loss: 0.6327
+Accuracy of the network on the 10000 test images: 85.980 %
+
+Epoch: 53
+[53, 10000] loss: 0.0310
+Accuracy of the network on the 10000 train images: 99.069 %
+[53, 20000] loss: 0.0303
+Accuracy of the network on the 10000 train images: 99.054 %
+[53, 30000] loss: 0.0384
+Accuracy of the network on the 10000 train images: 98.921 %
+[53, 40000] loss: 0.0375
+Accuracy of the network on the 10000 train images: 98.921 %
+[53, 50000] loss: 0.0427
+Accuracy of the network on the 10000 train images: 98.883 %
+[53, 10000] loss: 0.6021
+Accuracy of the network on the 10000 test images: 85.921 %
+
+Epoch: 54
+[54, 10000] loss: 0.0361
+Accuracy of the network on the 10000 train images: 98.980 %
+[54, 20000] loss: 0.0345
+Accuracy of the network on the 10000 train images: 98.901 %
+[54, 30000] loss: 0.0353
+Accuracy of the network on the 10000 train images: 98.904 %
+[54, 40000] loss: 0.0335
+Accuracy of the network on the 10000 train images: 98.933 %
+[54, 50000] loss: 0.0450
+Accuracy of the network on the 10000 train images: 98.859 %
+[54, 10000] loss: 0.6002
+Accuracy of the network on the 10000 test images: 86.050 %
+
+Epoch: 55
+[55, 10000] loss: 0.0355
+Accuracy of the network on the 10000 train images: 98.901 %
+[55, 20000] loss: 0.0369
+Accuracy of the network on the 10000 train images: 98.896 %
+[55, 30000] loss: 0.0310
+Accuracy of the network on the 10000 train images: 98.954 %
+[55, 40000] loss: 0.0286
+Accuracy of the network on the 10000 train images: 99.050 %
+[55, 50000] loss: 0.0366
+Accuracy of the network on the 10000 train images: 99.040 %
+[55, 10000] loss: 0.6311
+Accuracy of the network on the 10000 test images: 85.812 %
+
+Epoch: 56
+[56, 10000] loss: 0.0291
+Accuracy of the network on the 10000 train images: 99.040 %
+[56, 20000] loss: 0.0290
+Accuracy of the network on the 10000 train images: 99.030 %
+[56, 30000] loss: 0.0389
+Accuracy of the network on the 10000 train images: 98.914 %
+[56, 40000] loss: 0.0357
+Accuracy of the network on the 10000 train images: 98.911 %
+[56, 50000] loss: 0.0330
+Accuracy of the network on the 10000 train images: 98.947 %
+[56, 10000] loss: 0.6282
+Accuracy of the network on the 10000 test images: 86.000 %
+
+Epoch: 57
+[57, 10000] loss: 0.0270
+Accuracy of the network on the 10000 train images: 99.168 %
+[57, 20000] loss: 0.0297
+Accuracy of the network on the 10000 train images: 99.139 %
+[57, 30000] loss: 0.0321
+Accuracy of the network on the 10000 train images: 99.106 %
+[57, 40000] loss: 0.0305
+Accuracy of the network on the 10000 train images: 99.084 %
+[57, 50000] loss: 0.0313
+Accuracy of the network on the 10000 train images: 99.081 %
+[57, 10000] loss: 0.6396
+Accuracy of the network on the 10000 test images: 85.891 %
+
+Epoch: 58
+[58, 10000] loss: 0.0306
+Accuracy of the network on the 10000 train images: 98.970 %
+[58, 20000] loss: 0.0260
+Accuracy of the network on the 10000 train images: 99.149 %
+[58, 30000] loss: 0.0262
+Accuracy of the network on the 10000 train images: 99.165 %
+[58, 40000] loss: 0.0208
+Accuracy of the network on the 10000 train images: 99.213 %
+[58, 50000] loss: 0.0256
+Accuracy of the network on the 10000 train images: 99.220 %
+[58, 10000] loss: 0.6199
+Accuracy of the network on the 10000 test images: 86.416 %
+Saving..
+
+Epoch: 59
+[59, 10000] loss: 0.0215
+Accuracy of the network on the 10000 train images: 99.356 %
+[59, 20000] loss: 0.0252
+Accuracy of the network on the 10000 train images: 99.361 %
+[59, 30000] loss: 0.0219
+Accuracy of the network on the 10000 train images: 99.380 %
+[59, 40000] loss: 0.0175
+Accuracy of the network on the 10000 train images: 99.436 %
+[59, 50000] loss: 0.0221
+Accuracy of the network on the 10000 train images: 99.416 %
+[59, 10000] loss: 0.6132
+Accuracy of the network on the 10000 test images: 86.564 %
+Saving..
+
+Epoch: 60
+[60, 10000] loss: 0.0227
+Accuracy of the network on the 10000 train images: 99.386 %
+[60, 20000] loss: 0.0203
+Accuracy of the network on the 10000 train images: 99.411 %
+[60, 30000] loss: 0.0237
+Accuracy of the network on the 10000 train images: 99.353 %
+[60, 40000] loss: 0.0198
+Accuracy of the network on the 10000 train images: 99.391 %
+[60, 50000] loss: 0.0283
+Accuracy of the network on the 10000 train images: 99.352 %
+[60, 10000] loss: 0.6632
+Accuracy of the network on the 10000 test images: 85.535 %
+
+Epoch: 61
+[61, 10000] loss: 0.0209
+Accuracy of the network on the 10000 train images: 99.376 %
+[61, 20000] loss: 0.0145
+Accuracy of the network on the 10000 train images: 99.495 %
+[61, 30000] loss: 0.0221
+Accuracy of the network on the 10000 train images: 99.432 %
+[61, 40000] loss: 0.0246
+Accuracy of the network on the 10000 train images: 99.384 %
+[61, 50000] loss: 0.0240
+Accuracy of the network on the 10000 train images: 99.374 %
+[61, 10000] loss: 0.5994
+Accuracy of the network on the 10000 test images: 85.990 %
+
+Epoch: 62
+[62, 10000] loss: 0.0206
+Accuracy of the network on the 10000 train images: 99.446 %
+[62, 20000] loss: 0.0174
+Accuracy of the network on the 10000 train images: 99.530 %
+[62, 30000] loss: 0.0202
+Accuracy of the network on the 10000 train images: 99.521 %
+[62, 40000] loss: 0.0195
+Accuracy of the network on the 10000 train images: 99.505 %
+[62, 50000] loss: 0.0212
+Accuracy of the network on the 10000 train images: 99.485 %
+[62, 10000] loss: 0.6300
+Accuracy of the network on the 10000 test images: 86.871 %
+Saving..
+
+Epoch: 63
+[63, 10000] loss: 0.0198
+Accuracy of the network on the 10000 train images: 99.406 %
+[63, 20000] loss: 0.0169
+Accuracy of the network on the 10000 train images: 99.490 %
+[63, 30000] loss: 0.0139
+Accuracy of the network on the 10000 train images: 99.551 %
+[63, 40000] loss: 0.0184
+Accuracy of the network on the 10000 train images: 99.554 %
+[63, 50000] loss: 0.0170
+Accuracy of the network on the 10000 train images: 99.570 %
+[63, 10000] loss: 0.6278
+Accuracy of the network on the 10000 test images: 86.861 %
+
+Epoch: 64
+[64, 10000] loss: 0.0142
+Accuracy of the network on the 10000 train images: 99.653 %
+[64, 20000] loss: 0.0192
+Accuracy of the network on the 10000 train images: 99.554 %
+[64, 30000] loss: 0.0204
+Accuracy of the network on the 10000 train images: 99.531 %
+[64, 40000] loss: 0.0214
+Accuracy of the network on the 10000 train images: 99.512 %
+[64, 50000] loss: 0.0199
+Accuracy of the network on the 10000 train images: 99.501 %
+[64, 10000] loss: 0.6338
+Accuracy of the network on the 10000 test images: 86.881 %
+Saving..
+
+Epoch: 65
+[65, 10000] loss: 0.0160
+Accuracy of the network on the 10000 train images: 99.614 %
+[65, 20000] loss: 0.0174
+Accuracy of the network on the 10000 train images: 99.584 %
+[65, 30000] loss: 0.0200
+Accuracy of the network on the 10000 train images: 99.551 %
+[65, 40000] loss: 0.0186
+Accuracy of the network on the 10000 train images: 99.532 %
+[65, 50000] loss: 0.0204
+Accuracy of the network on the 10000 train images: 99.517 %
+[65, 10000] loss: 0.6386
+Accuracy of the network on the 10000 test images: 86.347 %
+
+Epoch: 66
+[66, 10000] loss: 0.0189
+Accuracy of the network on the 10000 train images: 99.535 %
+[66, 20000] loss: 0.0181
+Accuracy of the network on the 10000 train images: 99.520 %
+[66, 30000] loss: 0.0157
+Accuracy of the network on the 10000 train images: 99.554 %
+[66, 40000] loss: 0.0150
+Accuracy of the network on the 10000 train images: 99.574 %
+[66, 50000] loss: 0.0176
+Accuracy of the network on the 10000 train images: 99.564 %
+[66, 10000] loss: 0.6228
+Accuracy of the network on the 10000 test images: 86.733 %
+
+Epoch: 67
+[67, 10000] loss: 0.0123
+Accuracy of the network on the 10000 train images: 99.782 %
+[67, 20000] loss: 0.0153
+Accuracy of the network on the 10000 train images: 99.693 %
+[67, 30000] loss: 0.0153
+Accuracy of the network on the 10000 train images: 99.677 %
+[67, 40000] loss: 0.0160
+Accuracy of the network on the 10000 train images: 99.649 %
+[67, 50000] loss: 0.0189
+Accuracy of the network on the 10000 train images: 99.632 %
+[67, 10000] loss: 0.6542
+Accuracy of the network on the 10000 test images: 86.119 %
+
+Epoch: 68
+[68, 10000] loss: 0.0166
+Accuracy of the network on the 10000 train images: 99.584 %
+[68, 20000] loss: 0.0147
+Accuracy of the network on the 10000 train images: 99.609 %
+[68, 30000] loss: 0.0154
+Accuracy of the network on the 10000 train images: 99.637 %
+[68, 40000] loss: 0.0139
+Accuracy of the network on the 10000 train images: 99.658 %
+[68, 50000] loss: 0.0152
+Accuracy of the network on the 10000 train images: 99.655 %
+[68, 10000] loss: 0.6194
+Accuracy of the network on the 10000 test images: 86.495 %
+
+Epoch: 69
+[69, 10000] loss: 0.0165
+Accuracy of the network on the 10000 train images: 99.545 %
+[69, 20000] loss: 0.0131
+Accuracy of the network on the 10000 train images: 99.644 %
+[69, 30000] loss: 0.0136
+Accuracy of the network on the 10000 train images: 99.647 %
+[69, 40000] loss: 0.0149
+Accuracy of the network on the 10000 train images: 99.641 %
+[69, 50000] loss: 0.0131
+Accuracy of the network on the 10000 train images: 99.657 %
+[69, 10000] loss: 0.6159
+Accuracy of the network on the 10000 test images: 86.911 %
+Saving..
+
+Epoch: 70
+[70, 10000] loss: 0.0092
+Accuracy of the network on the 10000 train images: 99.832 %
+[70, 20000] loss: 0.0106
+Accuracy of the network on the 10000 train images: 99.797 %
+[70, 30000] loss: 0.0139
+Accuracy of the network on the 10000 train images: 99.749 %
+[70, 40000] loss: 0.0138
+Accuracy of the network on the 10000 train images: 99.723 %
+[70, 50000] loss: 0.0180
+Accuracy of the network on the 10000 train images: 99.691 %
+[70, 10000] loss: 0.6470
+Accuracy of the network on the 10000 test images: 86.228 %
+
+Epoch: 71
+[71, 10000] loss: 0.0172
+Accuracy of the network on the 10000 train images: 99.564 %
+[71, 20000] loss: 0.0128
+Accuracy of the network on the 10000 train images: 99.619 %
+[71, 30000] loss: 0.0119
+Accuracy of the network on the 10000 train images: 99.657 %
+[71, 40000] loss: 0.0137
+Accuracy of the network on the 10000 train images: 99.663 %
+[71, 50000] loss: 0.0124
+Accuracy of the network on the 10000 train images: 99.673 %
+[71, 10000] loss: 0.6258
+Accuracy of the network on the 10000 test images: 86.693 %
+
+Epoch: 72
+[72, 10000] loss: 0.0135
+Accuracy of the network on the 10000 train images: 99.713 %
+[72, 20000] loss: 0.0117
+Accuracy of the network on the 10000 train images: 99.713 %
+[72, 30000] loss: 0.0128
+Accuracy of the network on the 10000 train images: 99.713 %
+[72, 40000] loss: 0.0104
+Accuracy of the network on the 10000 train images: 99.733 %
+[72, 50000] loss: 0.0136
+Accuracy of the network on the 10000 train images: 99.705 %
+[72, 10000] loss: 0.6224
+Accuracy of the network on the 10000 test images: 86.693 %
+
+Epoch: 73
+[73, 10000] loss: 0.0108
+Accuracy of the network on the 10000 train images: 99.792 %
+[73, 20000] loss: 0.0110
+Accuracy of the network on the 10000 train images: 99.757 %
+[73, 30000] loss: 0.0083
+Accuracy of the network on the 10000 train images: 99.789 %
+[73, 40000] loss: 0.0119
+Accuracy of the network on the 10000 train images: 99.777 %
+[73, 50000] loss: 0.0110
+Accuracy of the network on the 10000 train images: 99.774 %
+[73, 10000] loss: 0.6087
+Accuracy of the network on the 10000 test images: 87.099 %
+Saving..
+
+Epoch: 74
+[74, 10000] loss: 0.0111
+Accuracy of the network on the 10000 train images: 99.723 %
+[74, 20000] loss: 0.0123
+Accuracy of the network on the 10000 train images: 99.713 %
+[74, 30000] loss: 0.0090
+Accuracy of the network on the 10000 train images: 99.752 %
+[74, 40000] loss: 0.0134
+Accuracy of the network on the 10000 train images: 99.730 %
+[74, 50000] loss: 0.0145
+Accuracy of the network on the 10000 train images: 99.703 %
+[74, 10000] loss: 0.6453
+Accuracy of the network on the 10000 test images: 86.574 %
+
+Epoch: 75
+[75, 10000] loss: 0.0119
+Accuracy of the network on the 10000 train images: 99.772 %
+[75, 20000] loss: 0.0129
+Accuracy of the network on the 10000 train images: 99.723 %
+[75, 30000] loss: 0.0135
+Accuracy of the network on the 10000 train images: 99.716 %
+[75, 40000] loss: 0.0134
+Accuracy of the network on the 10000 train images: 99.720 %
+[75, 50000] loss: 0.0111
+Accuracy of the network on the 10000 train images: 99.721 %
+[75, 10000] loss: 0.6215
+Accuracy of the network on the 10000 test images: 87.040 %
+
+Epoch: 76
+[76, 10000] loss: 0.0097
+Accuracy of the network on the 10000 train images: 99.782 %
+[76, 20000] loss: 0.0087
+Accuracy of the network on the 10000 train images: 99.827 %
+[76, 30000] loss: 0.0089
+Accuracy of the network on the 10000 train images: 99.818 %
+[76, 40000] loss: 0.0085
+Accuracy of the network on the 10000 train images: 99.834 %
+[76, 50000] loss: 0.0103
+Accuracy of the network on the 10000 train images: 99.826 %
+[76, 10000] loss: 0.6342
+Accuracy of the network on the 10000 test images: 86.980 %
+
+Epoch: 77
+[77, 10000] loss: 0.0078
+Accuracy of the network on the 10000 train images: 99.871 %
+[77, 20000] loss: 0.0091
+Accuracy of the network on the 10000 train images: 99.851 %
+[77, 30000] loss: 0.0100
+Accuracy of the network on the 10000 train images: 99.838 %
+[77, 40000] loss: 0.0094
+Accuracy of the network on the 10000 train images: 99.837 %
+[77, 50000] loss: 0.0088
+Accuracy of the network on the 10000 train images: 99.846 %
+[77, 10000] loss: 0.6321
+Accuracy of the network on the 10000 test images: 87.010 %
+
+Epoch: 78
+[78, 10000] loss: 0.0088
+Accuracy of the network on the 10000 train images: 99.861 %
+[78, 20000] loss: 0.0092
+Accuracy of the network on the 10000 train images: 99.842 %
+[78, 30000] loss: 0.0086
+Accuracy of the network on the 10000 train images: 99.838 %
+[78, 40000] loss: 0.0105
+Accuracy of the network on the 10000 train images: 99.822 %
+[78, 50000] loss: 0.0102
+Accuracy of the network on the 10000 train images: 99.818 %
+[78, 10000] loss: 0.6343
+Accuracy of the network on the 10000 test images: 87.119 %
+Saving..
+
+Epoch: 79
+[79, 10000] loss: 0.0114
+Accuracy of the network on the 10000 train images: 99.713 %
+[79, 20000] loss: 0.0116
+Accuracy of the network on the 10000 train images: 99.743 %
+[79, 30000] loss: 0.0090
+Accuracy of the network on the 10000 train images: 99.782 %
+[79, 40000] loss: 0.0087
+Accuracy of the network on the 10000 train images: 99.785 %
+[79, 50000] loss: 0.0087
+Accuracy of the network on the 10000 train images: 99.798 %
+[79, 10000] loss: 0.6060
+Accuracy of the network on the 10000 test images: 87.307 %
+Saving..
+
+Epoch: 80
+[80, 10000] loss: 0.0097
+Accuracy of the network on the 10000 train images: 99.842 %
+[80, 20000] loss: 0.0087
+Accuracy of the network on the 10000 train images: 99.851 %
+[80, 30000] loss: 0.0086
+Accuracy of the network on the 10000 train images: 99.842 %
+[80, 40000] loss: 0.0104
+Accuracy of the network on the 10000 train images: 99.827 %
+[80, 50000] loss: 0.0101
+Accuracy of the network on the 10000 train images: 99.814 %
+[80, 10000] loss: 0.6193
+Accuracy of the network on the 10000 test images: 86.960 %
+
+Epoch: 81
+[81, 10000] loss: 0.0085
+Accuracy of the network on the 10000 train images: 99.881 %
+[81, 20000] loss: 0.0094
+Accuracy of the network on the 10000 train images: 99.866 %
+[81, 30000] loss: 0.0093
+Accuracy of the network on the 10000 train images: 99.855 %
+[81, 40000] loss: 0.0081
+Accuracy of the network on the 10000 train images: 99.864 %
+[81, 50000] loss: 0.0109
+Accuracy of the network on the 10000 train images: 99.851 %
+[81, 10000] loss: 0.6312
+Accuracy of the network on the 10000 test images: 86.832 %
+
+Epoch: 82
+[82, 10000] loss: 0.0122
+Accuracy of the network on the 10000 train images: 99.723 %
+[82, 20000] loss: 0.0084
+Accuracy of the network on the 10000 train images: 99.797 %
+[82, 30000] loss: 0.0096
+Accuracy of the network on the 10000 train images: 99.809 %
+[82, 40000] loss: 0.0094
+Accuracy of the network on the 10000 train images: 99.819 %
+[82, 50000] loss: 0.0086
+Accuracy of the network on the 10000 train images: 99.824 %
+[82, 10000] loss: 0.6150
+Accuracy of the network on the 10000 test images: 87.089 %
+
+Epoch: 83
+[83, 10000] loss: 0.0075
+Accuracy of the network on the 10000 train images: 99.881 %
+[83, 20000] loss: 0.0078
+Accuracy of the network on the 10000 train images: 99.866 %
+[83, 30000] loss: 0.0080
+Accuracy of the network on the 10000 train images: 99.878 %
+[83, 40000] loss: 0.0095
+Accuracy of the network on the 10000 train images: 99.866 %
+[83, 50000] loss: 0.0080
+Accuracy of the network on the 10000 train images: 99.873 %
+[83, 10000] loss: 0.6221
+Accuracy of the network on the 10000 test images: 86.990 %
+
+Epoch: 84
+[84, 10000] loss: 0.0086
+Accuracy of the network on the 10000 train images: 99.871 %
+[84, 20000] loss: 0.0091
+Accuracy of the network on the 10000 train images: 99.847 %
+[84, 30000] loss: 0.0091
+Accuracy of the network on the 10000 train images: 99.845 %
+[84, 40000] loss: 0.0099
+Accuracy of the network on the 10000 train images: 99.832 %
+[84, 50000] loss: 0.0114
+Accuracy of the network on the 10000 train images: 99.818 %
+[84, 10000] loss: 0.6180
+Accuracy of the network on the 10000 test images: 86.901 %
+
+Epoch: 85
+[85, 10000] loss: 0.0095
+Accuracy of the network on the 10000 train images: 99.792 %
+[85, 20000] loss: 0.0082
+Accuracy of the network on the 10000 train images: 99.837 %
+[85, 30000] loss: 0.0092
+Accuracy of the network on the 10000 train images: 99.832 %
+[85, 40000] loss: 0.0086
+Accuracy of the network on the 10000 train images: 99.847 %
+[85, 50000] loss: 0.0115
+Accuracy of the network on the 10000 train images: 99.834 %
+[85, 10000] loss: 0.6002
+Accuracy of the network on the 10000 test images: 86.950 %
+
+Epoch: 86
+[86, 10000] loss: 0.0086
+Accuracy of the network on the 10000 train images: 99.832 %
+[86, 20000] loss: 0.0098
+Accuracy of the network on the 10000 train images: 99.802 %
+[86, 30000] loss: 0.0092
+Accuracy of the network on the 10000 train images: 99.802 %
+[86, 40000] loss: 0.0082
+Accuracy of the network on the 10000 train images: 99.822 %
+[86, 50000] loss: 0.0069
+Accuracy of the network on the 10000 train images: 99.840 %
+[86, 10000] loss: 0.6333
+Accuracy of the network on the 10000 test images: 87.089 %
+
+Epoch: 87
+[87, 10000] loss: 0.0077
+Accuracy of the network on the 10000 train images: 99.861 %
+[87, 20000] loss: 0.0088
+Accuracy of the network on the 10000 train images: 99.851 %
+[87, 30000] loss: 0.0083
+Accuracy of the network on the 10000 train images: 99.875 %
+[87, 40000] loss: 0.0081
+Accuracy of the network on the 10000 train images: 99.864 %
+[87, 50000] loss: 0.0077
+Accuracy of the network on the 10000 train images: 99.867 %
+[87, 10000] loss: 0.5995
+Accuracy of the network on the 10000 test images: 87.109 %
+
+Epoch: 88
+[88, 10000] loss: 0.0087
+Accuracy of the network on the 10000 train images: 99.891 %
+[88, 20000] loss: 0.0056
+Accuracy of the network on the 10000 train images: 99.926 %
+[88, 30000] loss: 0.0076
+Accuracy of the network on the 10000 train images: 99.914 %
+[88, 40000] loss: 0.0088
+Accuracy of the network on the 10000 train images: 99.896 %
+[88, 50000] loss: 0.0089
+Accuracy of the network on the 10000 train images: 99.895 %
+[88, 10000] loss: 0.5959
+Accuracy of the network on the 10000 test images: 87.040 %
+
+Epoch: 89
+[89, 10000] loss: 0.0076
+Accuracy of the network on the 10000 train images: 99.921 %
+[89, 20000] loss: 0.0091
+Accuracy of the network on the 10000 train images: 99.876 %
+[89, 30000] loss: 0.0092
+Accuracy of the network on the 10000 train images: 99.871 %
+[89, 40000] loss: 0.0094
+Accuracy of the network on the 10000 train images: 99.851 %
+[89, 50000] loss: 0.0103
+Accuracy of the network on the 10000 train images: 99.842 %
+[89, 10000] loss: 0.6012
+Accuracy of the network on the 10000 test images: 87.228 %
+
+Epoch: 90
+[90, 10000] loss: 0.0094
+Accuracy of the network on the 10000 train images: 99.792 %
+[90, 20000] loss: 0.0078
+Accuracy of the network on the 10000 train images: 99.817 %
+[90, 30000] loss: 0.0075
+Accuracy of the network on the 10000 train images: 99.838 %
+[90, 40000] loss: 0.0070
+Accuracy of the network on the 10000 train images: 99.859 %
+[90, 50000] loss: 0.0075
+Accuracy of the network on the 10000 train images: 99.863 %
+[90, 10000] loss: 0.6116
+Accuracy of the network on the 10000 test images: 87.248 %
+
+Epoch: 91
+[91, 10000] loss: 0.0082
+Accuracy of the network on the 10000 train images: 99.802 %
+[91, 20000] loss: 0.0089
+Accuracy of the network on the 10000 train images: 99.827 %
+[91, 30000] loss: 0.0099
+Accuracy of the network on the 10000 train images: 99.815 %
+[91, 40000] loss: 0.0081
+Accuracy of the network on the 10000 train images: 99.832 %
+[91, 50000] loss: 0.0083
+Accuracy of the network on the 10000 train images: 99.842 %
+[91, 10000] loss: 0.6020
+Accuracy of the network on the 10000 test images: 87.020 %
+
+Epoch: 92
+[92, 10000] loss: 0.0078
+Accuracy of the network on the 10000 train images: 99.881 %
+[92, 20000] loss: 0.0069
+Accuracy of the network on the 10000 train images: 99.896 %
+[92, 30000] loss: 0.0063
+Accuracy of the network on the 10000 train images: 99.904 %
+[92, 40000] loss: 0.0073
+Accuracy of the network on the 10000 train images: 99.901 %
+[92, 50000] loss: 0.0085
+Accuracy of the network on the 10000 train images: 99.893 %
+[92, 10000] loss: 0.6054
+Accuracy of the network on the 10000 test images: 87.129 %
+
+Epoch: 93
+[93, 10000] loss: 0.0096
+Accuracy of the network on the 10000 train images: 99.822 %
+[93, 20000] loss: 0.0080
+Accuracy of the network on the 10000 train images: 99.832 %
+[93, 30000] loss: 0.0078
+Accuracy of the network on the 10000 train images: 99.855 %
+[93, 40000] loss: 0.0078
+Accuracy of the network on the 10000 train images: 99.861 %
+[93, 50000] loss: 0.0087
+Accuracy of the network on the 10000 train images: 99.853 %
+[93, 10000] loss: 0.6135
+Accuracy of the network on the 10000 test images: 87.178 %
+
+Epoch: 94
+[94, 10000] loss: 0.0069
+Accuracy of the network on the 10000 train images: 99.891 %
+[94, 20000] loss: 0.0072
+Accuracy of the network on the 10000 train images: 99.891 %
+[94, 30000] loss: 0.0079
+Accuracy of the network on the 10000 train images: 99.884 %
+[94, 40000] loss: 0.0072
+Accuracy of the network on the 10000 train images: 99.889 %
+[94, 50000] loss: 0.0065
+Accuracy of the network on the 10000 train images: 99.899 %
+[94, 10000] loss: 0.6135
+Accuracy of the network on the 10000 test images: 87.307 %
+
+Epoch: 95
+[95, 10000] loss: 0.0064
+Accuracy of the network on the 10000 train images: 99.941 %
+[95, 20000] loss: 0.0067
+Accuracy of the network on the 10000 train images: 99.921 %
+[95, 30000] loss: 0.0063
+Accuracy of the network on the 10000 train images: 99.911 %
+[95, 40000] loss: 0.0062
+Accuracy of the network on the 10000 train images: 99.918 %
+[95, 50000] loss: 0.0074
+Accuracy of the network on the 10000 train images: 99.919 %
+[95, 10000] loss: 0.6110
+Accuracy of the network on the 10000 test images: 87.129 %
+
+Epoch: 96
+[96, 10000] loss: 0.0072
+Accuracy of the network on the 10000 train images: 99.851 %
+[96, 20000] loss: 0.0085
+Accuracy of the network on the 10000 train images: 99.847 %
+[96, 30000] loss: 0.0091
+Accuracy of the network on the 10000 train images: 99.835 %
+[96, 40000] loss: 0.0072
+Accuracy of the network on the 10000 train images: 99.844 %
+[96, 50000] loss: 0.0085
+Accuracy of the network on the 10000 train images: 99.851 %
+[96, 10000] loss: 0.6090
+Accuracy of the network on the 10000 test images: 86.881 %
+
+Epoch: 97
+[97, 10000] loss: 0.0063
+Accuracy of the network on the 10000 train images: 99.921 %
+[97, 20000] loss: 0.0070
+Accuracy of the network on the 10000 train images: 99.906 %
+[97, 30000] loss: 0.0089
+Accuracy of the network on the 10000 train images: 99.868 %
+[97, 40000] loss: 0.0073
+Accuracy of the network on the 10000 train images: 99.871 %
+[97, 50000] loss: 0.0092
+Accuracy of the network on the 10000 train images: 99.859 %
+[97, 10000] loss: 0.6155
+Accuracy of the network on the 10000 test images: 86.812 %
+
+Epoch: 98
+[98, 10000] loss: 0.0077
+Accuracy of the network on the 10000 train images: 99.901 %
+[98, 20000] loss: 0.0097
+Accuracy of the network on the 10000 train images: 99.861 %
+[98, 30000] loss: 0.0092
+Accuracy of the network on the 10000 train images: 99.858 %
+[98, 40000] loss: 0.0084
+Accuracy of the network on the 10000 train images: 99.849 %
+[98, 50000] loss: 0.0075
+Accuracy of the network on the 10000 train images: 99.863 %
+[98, 10000] loss: 0.6037
+Accuracy of the network on the 10000 test images: 87.000 %
+
+Epoch: 99
+[99, 10000] loss: 0.0084
+Accuracy of the network on the 10000 train images: 99.901 %
+[99, 20000] loss: 0.0073
+Accuracy of the network on the 10000 train images: 99.911 %
+[99, 30000] loss: 0.0062
+Accuracy of the network on the 10000 train images: 99.924 %
+[99, 40000] loss: 0.0075
+Accuracy of the network on the 10000 train images: 99.918 %
+[99, 50000] loss: 0.0058
+Accuracy of the network on the 10000 train images: 99.919 %
+[99, 10000] loss: 0.6089
+Accuracy of the network on the 10000 test images: 87.297 %
+
+进程已结束,退出代码0

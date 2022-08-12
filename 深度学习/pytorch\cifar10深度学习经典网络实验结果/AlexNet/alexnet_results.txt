@@ -1,0 +1,2040 @@
+D:\Anaconda_v2\python.exe D:/code/pytorch-cifar-master/main.py 
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(128, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (4): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (5): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (6): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (7): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (8): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (9): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (10): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (11): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (12): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (13): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (14): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (15): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (16): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (17): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (18): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (19): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (20): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (21): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (22): Bottleneck(
+      (conv1): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(256, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer4): Sequential(
+    (0): Bottleneck(
+      (conv1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(1024, 2048, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (2): Bottleneck(
+      (conv1): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (avgpool): AvgPool2d(kernel_size=4, stride=1, padding=0)
+  (linear): Linear(in_features=2048, out_features=10, bias=True)
+)
+torch.Size([1, 2048, 4, 4])
+torch.Size([1, 10])
+MobileNet(
+  (conv1): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layers): Sequential(
+    (0): Block(
+      (conv1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+      (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): Block(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=64, bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (2): Block(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=128, bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (3): Block(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=128, bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (4): Block(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256, bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (5): Block(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=256, bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (6): Block(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512, bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (7): Block(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512, bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (8): Block(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512, bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (9): Block(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512, bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (10): Block(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=512, bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (11): Block(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=512, bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (12): Block(
+      (conv1): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1024, bias=False)
+      (bn1): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (linear): Linear(in_features=1024, out_features=10, bias=True)
+)
+torch.Size([1, 10])
+MobileNetV2(
+  (conv1): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layers): Sequential(
+    (0): Block(
+      (conv1): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): Block(
+      (conv1): Conv2d(16, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=96, bias=False)
+      (bn2): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(96, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(16, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (2): Block(
+      (conv1): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(144, 144, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=144, bias=False)
+      (bn2): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(144, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (3): Block(
+      (conv1): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(144, 144, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=144, bias=False)
+      (bn2): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(144, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (4): Block(
+      (conv1): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+      (bn2): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (5): Block(
+      (conv1): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+      (bn2): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (6): Block(
+      (conv1): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=192, bias=False)
+      (bn2): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (7): Block(
+      (conv1): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+      (bn2): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (8): Block(
+      (conv1): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+      (bn2): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (9): Block(
+      (conv1): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+      (bn2): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (10): Block(
+      (conv1): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+      (bn2): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(384, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(64, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (11): Block(
+      (conv1): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+      (bn2): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (12): Block(
+      (conv1): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+      (bn2): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (13): Block(
+      (conv1): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(576, 576, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=576, bias=False)
+      (bn2): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(576, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (14): Block(
+      (conv1): Conv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False)
+      (bn2): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(960, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (15): Block(
+      (conv1): Conv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False)
+      (bn2): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(960, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+    (16): Block(
+      (conv1): Conv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False)
+      (bn2): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(960, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn3): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(160, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (conv2): Conv2d(320, 1280, kernel_size=(1, 1), stride=(1, 1), bias=False)
+  (bn2): BatchNorm2d(1280, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (linear): Linear(in_features=1280, out_features=10, bias=True)
+)
+torch.Size([2, 10])
+==> Preparing data..
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+
+Epoch: 0
+D:\Anaconda_v2\lib\site-packages\torch\optim\lr_scheduler.py:131: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+[0, 10000] loss: 2.3028
+Accuracy of the network on the 10000 train images: 10.040 %
+[0, 20000] loss: 2.3032
+Accuracy of the network on the 10000 train images: 10.010 %
+[0, 30000] loss: 2.3030
+Accuracy of the network on the 10000 train images: 9.993 %
+[0, 40000] loss: 2.3032
+Accuracy of the network on the 10000 train images: 10.035 %
+[0, 50000] loss: 2.3031
+Accuracy of the network on the 10000 train images: 10.004 %
+[0, 10000] loss: 2.3029
+Accuracy of the network on the 10000 test images: 9.990 %
+Saving..
+
+Epoch: 1
+[1, 10000] loss: 2.3031
+Accuracy of the network on the 10000 train images: 9.891 %
+[1, 20000] loss: 2.3032
+Accuracy of the network on the 10000 train images: 9.644 %
+[1, 30000] loss: 2.3028
+Accuracy of the network on the 10000 train images: 9.690 %
+[1, 40000] loss: 2.3031
+Accuracy of the network on the 10000 train images: 9.686 %
+[1, 50000] loss: 2.3029
+Accuracy of the network on the 10000 train images: 9.743 %
+[1, 10000] loss: 2.3029
+Accuracy of the network on the 10000 test images: 10.010 %
+Saving..
+
+Epoch: 2
+[2, 10000] loss: 2.3033
+Accuracy of the network on the 10000 train images: 9.743 %
+[2, 20000] loss: 2.3029
+Accuracy of the network on the 10000 train images: 9.802 %
+[2, 30000] loss: 2.3030
+Accuracy of the network on the 10000 train images: 9.779 %
+[2, 40000] loss: 2.3031
+Accuracy of the network on the 10000 train images: 9.866 %
+[2, 50000] loss: 2.3029
+Accuracy of the network on the 10000 train images: 9.857 %
+[2, 10000] loss: 2.3026
+Accuracy of the network on the 10000 test images: 10.040 %
+Saving..
+
+Epoch: 3
+[3, 10000] loss: 2.3025
+Accuracy of the network on the 10000 train images: 10.188 %
+[3, 20000] loss: 2.3028
+Accuracy of the network on the 10000 train images: 10.163 %
+[3, 30000] loss: 2.3028
+Accuracy of the network on the 10000 train images: 10.191 %
+[3, 40000] loss: 2.3028
+Accuracy of the network on the 10000 train images: 10.047 %
+[3, 50000] loss: 2.3026
+Accuracy of the network on the 10000 train images: 10.077 %
+[3, 10000] loss: 2.3023
+Accuracy of the network on the 10000 test images: 9.950 %
+
+Epoch: 4
+[4, 10000] loss: 2.3024
+Accuracy of the network on the 10000 train images: 11.050 %
+[4, 20000] loss: 2.3021
+Accuracy of the network on the 10000 train images: 10.985 %
+[4, 30000] loss: 2.3014
+Accuracy of the network on the 10000 train images: 10.703 %
+[4, 40000] loss: 2.2984
+Accuracy of the network on the 10000 train images: 11.121 %
+[4, 50000] loss: 2.2639
+Accuracy of the network on the 10000 train images: 11.770 %
+[4, 10000] loss: 2.1958
+Accuracy of the network on the 10000 test images: 16.347 %
+Saving..
+
+Epoch: 5
+[5, 10000] loss: 2.1243
+Accuracy of the network on the 10000 train images: 18.356 %
+[5, 20000] loss: 2.0389
+Accuracy of the network on the 10000 train images: 18.401 %
+[5, 30000] loss: 1.9779
+Accuracy of the network on the 10000 train images: 18.680 %
+[5, 40000] loss: 1.9678
+Accuracy of the network on the 10000 train images: 18.807 %
+[5, 50000] loss: 1.9445
+Accuracy of the network on the 10000 train images: 18.988 %
+[5, 10000] loss: 1.9176
+Accuracy of the network on the 10000 test images: 21.525 %
+Saving..
+
+Epoch: 6
+[6, 10000] loss: 1.9231
+Accuracy of the network on the 10000 train images: 21.545 %
+[6, 20000] loss: 1.9226
+Accuracy of the network on the 10000 train images: 21.208 %
+[6, 30000] loss: 1.9036
+Accuracy of the network on the 10000 train images: 20.974 %
+[6, 40000] loss: 1.9166
+Accuracy of the network on the 10000 train images: 21.082 %
+[6, 50000] loss: 1.9031
+Accuracy of the network on the 10000 train images: 21.194 %
+[6, 10000] loss: 1.8760
+Accuracy of the network on the 10000 test images: 23.634 %
+Saving..
+
+Epoch: 7
+[7, 10000] loss: 1.9027
+Accuracy of the network on the 10000 train images: 22.267 %
+[7, 20000] loss: 1.8792
+Accuracy of the network on the 10000 train images: 22.292 %
+[7, 30000] loss: 1.8781
+Accuracy of the network on the 10000 train images: 22.792 %
+[7, 40000] loss: 1.8818
+Accuracy of the network on the 10000 train images: 22.938 %
+[7, 50000] loss: 1.8770
+Accuracy of the network on the 10000 train images: 23.065 %
+[7, 10000] loss: 1.8698
+Accuracy of the network on the 10000 test images: 23.743 %
+Saving..
+
+Epoch: 8
+[8, 10000] loss: 1.8658
+Accuracy of the network on the 10000 train images: 24.475 %
+[8, 20000] loss: 1.8577
+Accuracy of the network on the 10000 train images: 24.881 %
+[8, 30000] loss: 1.8575
+Accuracy of the network on the 10000 train images: 25.092 %
+[8, 40000] loss: 1.8426
+Accuracy of the network on the 10000 train images: 25.579 %
+[8, 50000] loss: 1.8487
+Accuracy of the network on the 10000 train images: 25.588 %
+[8, 10000] loss: 1.8159
+Accuracy of the network on the 10000 test images: 29.752 %
+Saving..
+
+Epoch: 9
+[9, 10000] loss: 1.8466
+Accuracy of the network on the 10000 train images: 27.248 %
+[9, 20000] loss: 1.8327
+Accuracy of the network on the 10000 train images: 27.178 %
+[9, 30000] loss: 1.8267
+Accuracy of the network on the 10000 train images: 27.228 %
+[9, 40000] loss: 1.8017
+Accuracy of the network on the 10000 train images: 27.584 %
+[9, 50000] loss: 1.8143
+Accuracy of the network on the 10000 train images: 27.721 %
+[9, 10000] loss: 1.9202
+Accuracy of the network on the 10000 test images: 26.248 %
+
+Epoch: 10
+[10, 10000] loss: 1.8055
+Accuracy of the network on the 10000 train images: 29.069 %
+[10, 20000] loss: 1.7983
+Accuracy of the network on the 10000 train images: 29.223 %
+[10, 30000] loss: 1.7964
+Accuracy of the network on the 10000 train images: 29.059 %
+[10, 40000] loss: 1.7849
+Accuracy of the network on the 10000 train images: 29.270 %
+[10, 50000] loss: 1.7808
+Accuracy of the network on the 10000 train images: 29.493 %
+[10, 10000] loss: 1.7469
+Accuracy of the network on the 10000 test images: 31.396 %
+Saving..
+
+Epoch: 11
+[11, 10000] loss: 1.7330
+Accuracy of the network on the 10000 train images: 31.406 %
+[11, 20000] loss: 1.7105
+Accuracy of the network on the 10000 train images: 32.030 %
+[11, 30000] loss: 1.6842
+Accuracy of the network on the 10000 train images: 32.327 %
+[11, 40000] loss: 1.7003
+Accuracy of the network on the 10000 train images: 32.629 %
+[11, 50000] loss: 1.6360
+Accuracy of the network on the 10000 train images: 33.180 %
+[11, 10000] loss: 1.5986
+Accuracy of the network on the 10000 test images: 37.970 %
+Saving..
+
+Epoch: 12
+[12, 10000] loss: 1.6474
+Accuracy of the network on the 10000 train images: 35.881 %
+[12, 20000] loss: 1.6309
+Accuracy of the network on the 10000 train images: 36.035 %
+[12, 30000] loss: 1.5950
+Accuracy of the network on the 10000 train images: 36.426 %
+[12, 40000] loss: 1.5880
+Accuracy of the network on the 10000 train images: 36.616 %
+[12, 50000] loss: 1.5826
+Accuracy of the network on the 10000 train images: 36.919 %
+[12, 10000] loss: 1.5502
+Accuracy of the network on the 10000 test images: 39.000 %
+Saving..
+
+Epoch: 13
+[13, 10000] loss: 1.5761
+Accuracy of the network on the 10000 train images: 38.950 %
+[13, 20000] loss: 1.5774
+Accuracy of the network on the 10000 train images: 38.871 %
+[13, 30000] loss: 1.5418
+Accuracy of the network on the 10000 train images: 39.432 %
+[13, 40000] loss: 1.5495
+Accuracy of the network on the 10000 train images: 39.656 %
+[13, 50000] loss: 1.5533
+Accuracy of the network on the 10000 train images: 39.824 %
+[13, 10000] loss: 1.5192
+Accuracy of the network on the 10000 test images: 41.574 %
+Saving..
+
+Epoch: 14
+[14, 10000] loss: 1.5128
+Accuracy of the network on the 10000 train images: 41.802 %
+[14, 20000] loss: 1.4986
+Accuracy of the network on the 10000 train images: 42.381 %
+[14, 30000] loss: 1.5093
+Accuracy of the network on the 10000 train images: 42.446 %
+[14, 40000] loss: 1.5039
+Accuracy of the network on the 10000 train images: 42.500 %
+[14, 50000] loss: 1.4869
+Accuracy of the network on the 10000 train images: 42.606 %
+[14, 10000] loss: 1.4665
+Accuracy of the network on the 10000 test images: 44.000 %
+Saving..
+
+Epoch: 15
+[15, 10000] loss: 1.4564
+Accuracy of the network on the 10000 train images: 44.723 %
+[15, 20000] loss: 1.4548
+Accuracy of the network on the 10000 train images: 44.649 %
+[15, 30000] loss: 1.4333
+Accuracy of the network on the 10000 train images: 44.997 %
+[15, 40000] loss: 1.4521
+Accuracy of the network on the 10000 train images: 45.012 %
+[15, 50000] loss: 1.4179
+Accuracy of the network on the 10000 train images: 45.301 %
+[15, 10000] loss: 1.4198
+Accuracy of the network on the 10000 test images: 46.713 %
+Saving..
+
+Epoch: 16
+[16, 10000] loss: 1.4074
+Accuracy of the network on the 10000 train images: 47.198 %
+[16, 20000] loss: 1.4182
+Accuracy of the network on the 10000 train images: 46.926 %
+[16, 30000] loss: 1.3812
+Accuracy of the network on the 10000 train images: 47.310 %
+[16, 40000] loss: 1.3795
+Accuracy of the network on the 10000 train images: 47.530 %
+[16, 50000] loss: 1.3752
+Accuracy of the network on the 10000 train images: 47.812 %
+[16, 10000] loss: 1.3369
+Accuracy of the network on the 10000 test images: 51.376 %
+Saving..
+
+Epoch: 17
+[17, 10000] loss: 1.3576
+Accuracy of the network on the 10000 train images: 49.347 %
+[17, 20000] loss: 1.3252
+Accuracy of the network on the 10000 train images: 50.015 %
+[17, 30000] loss: 1.3343
+Accuracy of the network on the 10000 train images: 50.238 %
+[17, 40000] loss: 1.3367
+Accuracy of the network on the 10000 train images: 50.376 %
+[17, 50000] loss: 1.3325
+Accuracy of the network on the 10000 train images: 50.469 %
+[17, 10000] loss: 1.3192
+Accuracy of the network on the 10000 test images: 50.802 %
+
+Epoch: 18
+[18, 10000] loss: 1.3168
+Accuracy of the network on the 10000 train images: 50.752 %
+[18, 20000] loss: 1.2930
+Accuracy of the network on the 10000 train images: 51.554 %
+[18, 30000] loss: 1.3197
+Accuracy of the network on the 10000 train images: 51.498 %
+[18, 40000] loss: 1.2973
+Accuracy of the network on the 10000 train images: 51.832 %
+[18, 50000] loss: 1.2790
+Accuracy of the network on the 10000 train images: 52.014 %
+[18, 10000] loss: 1.3107
+Accuracy of the network on the 10000 test images: 51.911 %
+Saving..
+
+Epoch: 19
+[19, 10000] loss: 1.2645
+Accuracy of the network on the 10000 train images: 53.960 %
+[19, 20000] loss: 1.2592
+Accuracy of the network on the 10000 train images: 53.911 %
+[19, 30000] loss: 1.2569
+Accuracy of the network on the 10000 train images: 53.990 %
+[19, 40000] loss: 1.2615
+Accuracy of the network on the 10000 train images: 54.151 %
+[19, 50000] loss: 1.2397
+Accuracy of the network on the 10000 train images: 54.350 %
+[19, 10000] loss: 1.2935
+Accuracy of the network on the 10000 test images: 53.376 %
+Saving..
+
+Epoch: 20
+[20, 10000] loss: 1.2510
+Accuracy of the network on the 10000 train images: 54.634 %
+[20, 20000] loss: 1.2261
+Accuracy of the network on the 10000 train images: 55.307 %
+[20, 30000] loss: 1.2090
+Accuracy of the network on the 10000 train images: 55.799 %
+[20, 40000] loss: 1.2161
+Accuracy of the network on the 10000 train images: 55.839 %
+[20, 50000] loss: 1.2236
+Accuracy of the network on the 10000 train images: 55.869 %
+[20, 10000] loss: 1.1955
+Accuracy of the network on the 10000 test images: 56.713 %
+Saving..
+
+Epoch: 21
+[21, 10000] loss: 1.2078
+Accuracy of the network on the 10000 train images: 56.673 %
+[21, 20000] loss: 1.1812
+Accuracy of the network on the 10000 train images: 56.931 %
+[21, 30000] loss: 1.1972
+Accuracy of the network on the 10000 train images: 56.954 %
+[21, 40000] loss: 1.1884
+Accuracy of the network on the 10000 train images: 57.005 %
+[21, 50000] loss: 1.1982
+Accuracy of the network on the 10000 train images: 57.038 %
+[21, 10000] loss: 1.1465
+Accuracy of the network on the 10000 test images: 59.178 %
+Saving..
+
+Epoch: 22
+[22, 10000] loss: 1.1816
+Accuracy of the network on the 10000 train images: 58.515 %
+[22, 20000] loss: 1.1637
+Accuracy of the network on the 10000 train images: 58.693 %
+[22, 30000] loss: 1.1720
+Accuracy of the network on the 10000 train images: 58.340 %
+[22, 40000] loss: 1.1507
+Accuracy of the network on the 10000 train images: 58.542 %
+[22, 50000] loss: 1.1822
+Accuracy of the network on the 10000 train images: 58.438 %
+[22, 10000] loss: 1.1384
+Accuracy of the network on the 10000 test images: 58.881 %
+
+Epoch: 23
+[23, 10000] loss: 1.1509
+Accuracy of the network on the 10000 train images: 59.059 %
+[23, 20000] loss: 1.1278
+Accuracy of the network on the 10000 train images: 59.386 %
+[23, 30000] loss: 1.1325
+Accuracy of the network on the 10000 train images: 59.601 %
+[23, 40000] loss: 1.1450
+Accuracy of the network on the 10000 train images: 59.522 %
+[23, 50000] loss: 1.1313
+Accuracy of the network on the 10000 train images: 59.661 %
+[23, 10000] loss: 1.1096
+Accuracy of the network on the 10000 test images: 60.733 %
+Saving..
+
+Epoch: 24
+[24, 10000] loss: 1.0947
+Accuracy of the network on the 10000 train images: 61.079 %
+[24, 20000] loss: 1.1142
+Accuracy of the network on the 10000 train images: 60.797 %
+[24, 30000] loss: 1.0949
+Accuracy of the network on the 10000 train images: 60.904 %
+[24, 40000] loss: 1.1210
+Accuracy of the network on the 10000 train images: 60.787 %
+[24, 50000] loss: 1.1208
+Accuracy of the network on the 10000 train images: 60.774 %
+[24, 10000] loss: 1.1349
+Accuracy of the network on the 10000 test images: 59.980 %
+
+Epoch: 25
+[25, 10000] loss: 1.1187
+Accuracy of the network on the 10000 train images: 60.990 %
+[25, 20000] loss: 1.1077
+Accuracy of the network on the 10000 train images: 61.079 %
+[25, 30000] loss: 1.1072
+Accuracy of the network on the 10000 train images: 61.043 %
+[25, 40000] loss: 1.0956
+Accuracy of the network on the 10000 train images: 61.151 %
+[25, 50000] loss: 1.0783
+Accuracy of the network on the 10000 train images: 61.257 %
+[25, 10000] loss: 1.0856
+Accuracy of the network on the 10000 test images: 61.772 %
+Saving..
+
+Epoch: 26
+[26, 10000] loss: 1.0660
+Accuracy of the network on the 10000 train images: 62.446 %
+[26, 20000] loss: 1.1065
+Accuracy of the network on the 10000 train images: 61.911 %
+[26, 30000] loss: 1.0722
+Accuracy of the network on the 10000 train images: 62.257 %
+[26, 40000] loss: 1.0775
+Accuracy of the network on the 10000 train images: 62.267 %
+[26, 50000] loss: 1.0492
+Accuracy of the network on the 10000 train images: 62.364 %
+[26, 10000] loss: 1.0859
+Accuracy of the network on the 10000 test images: 62.396 %
+Saving..
+
+Epoch: 27
+[27, 10000] loss: 1.0662
+Accuracy of the network on the 10000 train images: 62.307 %
+[27, 20000] loss: 1.0624
+Accuracy of the network on the 10000 train images: 62.579 %
+[27, 30000] loss: 1.0746
+Accuracy of the network on the 10000 train images: 62.759 %
+[27, 40000] loss: 1.0447
+Accuracy of the network on the 10000 train images: 62.968 %
+[27, 50000] loss: 1.0689
+Accuracy of the network on the 10000 train images: 62.889 %
+[27, 10000] loss: 1.0744
+Accuracy of the network on the 10000 test images: 63.099 %
+Saving..
+
+Epoch: 28
+[28, 10000] loss: 1.0502
+Accuracy of the network on the 10000 train images: 63.109 %
+[28, 20000] loss: 1.0439
+Accuracy of the network on the 10000 train images: 63.114 %
+[28, 30000] loss: 1.0328
+Accuracy of the network on the 10000 train images: 63.294 %
+[28, 40000] loss: 1.0576
+Accuracy of the network on the 10000 train images: 63.463 %
+[28, 50000] loss: 1.0426
+Accuracy of the network on the 10000 train images: 63.511 %
+[28, 10000] loss: 1.0310
+Accuracy of the network on the 10000 test images: 64.149 %
+Saving..
+
+Epoch: 29
+[29, 10000] loss: 1.0242
+Accuracy of the network on the 10000 train images: 64.356 %
+[29, 20000] loss: 1.0256
+Accuracy of the network on the 10000 train images: 64.084 %
+[29, 30000] loss: 1.0452
+Accuracy of the network on the 10000 train images: 63.884 %
+[29, 40000] loss: 1.0149
+Accuracy of the network on the 10000 train images: 64.186 %
+[29, 50000] loss: 1.0461
+Accuracy of the network on the 10000 train images: 63.958 %
+[29, 10000] loss: 1.0717
+Accuracy of the network on the 10000 test images: 63.356 %
+
+Epoch: 30
+[30, 10000] loss: 1.0126
+Accuracy of the network on the 10000 train images: 63.980 %
+[30, 20000] loss: 1.0076
+Accuracy of the network on the 10000 train images: 64.589 %
+[30, 30000] loss: 1.0163
+Accuracy of the network on the 10000 train images: 64.752 %
+[30, 40000] loss: 0.9985
+Accuracy of the network on the 10000 train images: 64.936 %
+[30, 50000] loss: 1.0166
+Accuracy of the network on the 10000 train images: 64.764 %
+[30, 10000] loss: 1.0001
+Accuracy of the network on the 10000 test images: 65.198 %
+Saving..
+
+Epoch: 31
+[31, 10000] loss: 0.9949
+Accuracy of the network on the 10000 train images: 65.634 %
+[31, 20000] loss: 1.0215
+Accuracy of the network on the 10000 train images: 64.896 %
+[31, 30000] loss: 1.0064
+Accuracy of the network on the 10000 train images: 64.865 %
+[31, 40000] loss: 0.9883
+Accuracy of the network on the 10000 train images: 65.059 %
+[31, 50000] loss: 1.0054
+Accuracy of the network on the 10000 train images: 65.053 %
+[31, 10000] loss: 0.9993
+Accuracy of the network on the 10000 test images: 65.248 %
+Saving..
+
+Epoch: 32
+[32, 10000] loss: 0.9838
+Accuracy of the network on the 10000 train images: 65.515 %
+[32, 20000] loss: 0.9875
+Accuracy of the network on the 10000 train images: 65.876 %
+[32, 30000] loss: 0.9870
+Accuracy of the network on the 10000 train images: 65.795 %
+[32, 40000] loss: 0.9999
+Accuracy of the network on the 10000 train images: 65.564 %
+[32, 50000] loss: 0.9800
+Accuracy of the network on the 10000 train images: 65.673 %
+[32, 10000] loss: 1.0114
+Accuracy of the network on the 10000 test images: 65.376 %
+Saving..
+
+Epoch: 33
+[33, 10000] loss: 0.9690
+Accuracy of the network on the 10000 train images: 66.099 %
+[33, 20000] loss: 0.9954
+Accuracy of the network on the 10000 train images: 65.728 %
+[33, 30000] loss: 0.9855
+Accuracy of the network on the 10000 train images: 65.723 %
+[33, 40000] loss: 0.9405
+Accuracy of the network on the 10000 train images: 66.240 %
+[33, 50000] loss: 0.9791
+Accuracy of the network on the 10000 train images: 66.275 %
+[33, 10000] loss: 0.9683
+Accuracy of the network on the 10000 test images: 66.178 %
+Saving..
+
+Epoch: 34
+[34, 10000] loss: 0.9569
+Accuracy of the network on the 10000 train images: 67.099 %
+[34, 20000] loss: 0.9669
+Accuracy of the network on the 10000 train images: 66.752 %
+[34, 30000] loss: 0.9574
+Accuracy of the network on the 10000 train images: 66.713 %
+[34, 40000] loss: 0.9654
+Accuracy of the network on the 10000 train images: 66.678 %
+[34, 50000] loss: 0.9611
+Accuracy of the network on the 10000 train images: 66.723 %
+[34, 10000] loss: 0.9463
+Accuracy of the network on the 10000 test images: 67.356 %
+Saving..
+
+Epoch: 35
+[35, 10000] loss: 0.9368
+Accuracy of the network on the 10000 train images: 67.317 %
+[35, 20000] loss: 0.9545
+Accuracy of the network on the 10000 train images: 67.153 %
+[35, 30000] loss: 0.9357
+Accuracy of the network on the 10000 train images: 67.300 %
+[35, 40000] loss: 0.9593
+Accuracy of the network on the 10000 train images: 67.257 %
+[35, 50000] loss: 0.9671
+Accuracy of the network on the 10000 train images: 67.093 %
+[35, 10000] loss: 0.9515
+Accuracy of the network on the 10000 test images: 66.931 %
+
+Epoch: 36
+[36, 10000] loss: 0.9329
+Accuracy of the network on the 10000 train images: 68.525 %
+[36, 20000] loss: 0.9374
+Accuracy of the network on the 10000 train images: 67.891 %
+[36, 30000] loss: 0.9551
+Accuracy of the network on the 10000 train images: 67.498 %
+[36, 40000] loss: 0.9467
+Accuracy of the network on the 10000 train images: 67.312 %
+[36, 50000] loss: 0.9345
+Accuracy of the network on the 10000 train images: 67.295 %
+[36, 10000] loss: 0.9728
+Accuracy of the network on the 10000 test images: 66.337 %
+
+Epoch: 37
+[37, 10000] loss: 0.9424
+Accuracy of the network on the 10000 train images: 67.198 %
+[37, 20000] loss: 0.9285
+Accuracy of the network on the 10000 train images: 67.500 %
+[37, 30000] loss: 0.9278
+Accuracy of the network on the 10000 train images: 67.436 %
+[37, 40000] loss: 0.9266
+Accuracy of the network on the 10000 train images: 67.589 %
+[37, 50000] loss: 0.9284
+Accuracy of the network on the 10000 train images: 67.657 %
+[37, 10000] loss: 0.9099
+Accuracy of the network on the 10000 test images: 68.525 %
+Saving..
+
+Epoch: 38
+[38, 10000] loss: 0.9086
+Accuracy of the network on the 10000 train images: 68.426 %
+[38, 20000] loss: 0.9390
+Accuracy of the network on the 10000 train images: 68.025 %
+[38, 30000] loss: 0.9188
+Accuracy of the network on the 10000 train images: 68.109 %
+[38, 40000] loss: 0.9043
+Accuracy of the network on the 10000 train images: 68.255 %
+[38, 50000] loss: 0.9216
+Accuracy of the network on the 10000 train images: 68.184 %
+[38, 10000] loss: 0.9415
+Accuracy of the network on the 10000 test images: 67.218 %
+
+Epoch: 39
+[39, 10000] loss: 0.9065
+Accuracy of the network on the 10000 train images: 68.723 %
+[39, 20000] loss: 0.8907
+Accuracy of the network on the 10000 train images: 68.975 %
+[39, 30000] loss: 0.9244
+Accuracy of the network on the 10000 train images: 68.663 %
+[39, 40000] loss: 0.9141
+Accuracy of the network on the 10000 train images: 68.614 %
+[39, 50000] loss: 0.9033
+Accuracy of the network on the 10000 train images: 68.717 %
+[39, 10000] loss: 0.9256
+Accuracy of the network on the 10000 test images: 68.317 %
+
+Epoch: 40
+[40, 10000] loss: 0.8889
+Accuracy of the network on the 10000 train images: 69.683 %
+[40, 20000] loss: 0.8920
+Accuracy of the network on the 10000 train images: 69.470 %
+[40, 30000] loss: 0.8779
+Accuracy of the network on the 10000 train images: 69.525 %
+[40, 40000] loss: 0.8928
+Accuracy of the network on the 10000 train images: 69.384 %
+[40, 50000] loss: 0.9032
+Accuracy of the network on the 10000 train images: 69.242 %
+[40, 10000] loss: 0.9565
+Accuracy of the network on the 10000 test images: 66.921 %
+
+Epoch: 41
+[41, 10000] loss: 0.8786
+Accuracy of the network on the 10000 train images: 70.188 %
+[41, 20000] loss: 0.8891
+Accuracy of the network on the 10000 train images: 69.970 %
+[41, 30000] loss: 0.8964
+Accuracy of the network on the 10000 train images: 69.686 %
+[41, 40000] loss: 0.8967
+Accuracy of the network on the 10000 train images: 69.475 %
+[41, 50000] loss: 0.8742
+Accuracy of the network on the 10000 train images: 69.608 %
+[41, 10000] loss: 0.9239
+Accuracy of the network on the 10000 test images: 68.149 %
+
+Epoch: 42
+[42, 10000] loss: 0.8914
+Accuracy of the network on the 10000 train images: 69.366 %
+[42, 20000] loss: 0.8618
+Accuracy of the network on the 10000 train images: 69.520 %
+[42, 30000] loss: 0.8675
+Accuracy of the network on the 10000 train images: 69.878 %
+[42, 40000] loss: 0.8940
+Accuracy of the network on the 10000 train images: 69.681 %
+[42, 50000] loss: 0.8728
+Accuracy of the network on the 10000 train images: 69.770 %
+[42, 10000] loss: 0.9072
+Accuracy of the network on the 10000 test images: 68.822 %
+Saving..
+
+Epoch: 43
+[43, 10000] loss: 0.8540
+Accuracy of the network on the 10000 train images: 70.158 %
+[43, 20000] loss: 0.8709
+Accuracy of the network on the 10000 train images: 69.931 %
+[43, 30000] loss: 0.8629
+Accuracy of the network on the 10000 train images: 70.036 %
+[43, 40000] loss: 0.8958
+Accuracy of the network on the 10000 train images: 69.916 %
+[43, 50000] loss: 0.8496
+Accuracy of the network on the 10000 train images: 69.943 %
+[43, 10000] loss: 0.8526
+Accuracy of the network on the 10000 test images: 70.901 %
+Saving..
+
+Epoch: 44
+[44, 10000] loss: 0.8693
+Accuracy of the network on the 10000 train images: 69.545 %
+[44, 20000] loss: 0.8660
+Accuracy of the network on the 10000 train images: 70.010 %
+[44, 30000] loss: 0.8570
+Accuracy of the network on the 10000 train images: 70.139 %
+[44, 40000] loss: 0.8516
+Accuracy of the network on the 10000 train images: 70.245 %
+[44, 50000] loss: 0.8519
+Accuracy of the network on the 10000 train images: 70.366 %
+[44, 10000] loss: 0.8911
+Accuracy of the network on the 10000 test images: 69.475 %
+
+Epoch: 45
+[45, 10000] loss: 0.8749
+Accuracy of the network on the 10000 train images: 70.020 %
+[45, 20000] loss: 0.8457
+Accuracy of the network on the 10000 train images: 70.144 %
+[45, 30000] loss: 0.8515
+Accuracy of the network on the 10000 train images: 70.323 %
+[45, 40000] loss: 0.8317
+Accuracy of the network on the 10000 train images: 70.606 %
+[45, 50000] loss: 0.8586
+Accuracy of the network on the 10000 train images: 70.650 %
+[45, 10000] loss: 0.8577
+Accuracy of the network on the 10000 test images: 70.069 %
+
+Epoch: 46
+[46, 10000] loss: 0.8325
+Accuracy of the network on the 10000 train images: 71.436 %
+[46, 20000] loss: 0.8652
+Accuracy of the network on the 10000 train images: 70.851 %
+[46, 30000] loss: 0.8467
+Accuracy of the network on the 10000 train images: 70.809 %
+[46, 40000] loss: 0.8528
+Accuracy of the network on the 10000 train images: 70.683 %
+[46, 50000] loss: 0.8271
+Accuracy of the network on the 10000 train images: 70.721 %
+[46, 10000] loss: 0.8795
+Accuracy of the network on the 10000 test images: 70.327 %
+
+Epoch: 47
+[47, 10000] loss: 0.8412
+Accuracy of the network on the 10000 train images: 71.436 %
+[47, 20000] loss: 0.8267
+Accuracy of the network on the 10000 train images: 71.411 %
+[47, 30000] loss: 0.8451
+Accuracy of the network on the 10000 train images: 71.201 %
+[47, 40000] loss: 0.8363
+Accuracy of the network on the 10000 train images: 71.245 %
+[47, 50000] loss: 0.8286
+Accuracy of the network on the 10000 train images: 71.311 %
+[47, 10000] loss: 0.8566
+Accuracy of the network on the 10000 test images: 70.723 %
+
+Epoch: 48
+[48, 10000] loss: 0.8266
+Accuracy of the network on the 10000 train images: 71.861 %
+[48, 20000] loss: 0.8227
+Accuracy of the network on the 10000 train images: 71.886 %
+[48, 30000] loss: 0.8482
+Accuracy of the network on the 10000 train images: 71.601 %
+[48, 40000] loss: 0.8300
+Accuracy of the network on the 10000 train images: 71.658 %
+[48, 50000] loss: 0.8147
+Accuracy of the network on the 10000 train images: 71.711 %
+[48, 10000] loss: 0.8676
+Accuracy of the network on the 10000 test images: 70.089 %
+
+Epoch: 49
+[49, 10000] loss: 0.8151
+Accuracy of the network on the 10000 train images: 71.842 %
+[49, 20000] loss: 0.8159
+Accuracy of the network on the 10000 train images: 71.891 %
+[49, 30000] loss: 0.8295
+Accuracy of the network on the 10000 train images: 71.762 %
+[49, 40000] loss: 0.8322
+Accuracy of the network on the 10000 train images: 71.703 %
+[49, 50000] loss: 0.8104
+Accuracy of the network on the 10000 train images: 71.804 %
+[49, 10000] loss: 0.8464
+Accuracy of the network on the 10000 test images: 70.990 %
+Saving..
+
+Epoch: 50
+[50, 10000] loss: 0.8083
+Accuracy of the network on the 10000 train images: 71.950 %
+[50, 20000] loss: 0.8052
+Accuracy of the network on the 10000 train images: 71.950 %
+[50, 30000] loss: 0.7928
+Accuracy of the network on the 10000 train images: 72.264 %
+[50, 40000] loss: 0.8322
+Accuracy of the network on the 10000 train images: 72.007 %
+[50, 50000] loss: 0.8176
+Accuracy of the network on the 10000 train images: 71.976 %
+[50, 10000] loss: 0.8570
+Accuracy of the network on the 10000 test images: 70.545 %
+
+Epoch: 51
+[51, 10000] loss: 0.7930
+Accuracy of the network on the 10000 train images: 72.931 %
+[51, 20000] loss: 0.8092
+Accuracy of the network on the 10000 train images: 72.411 %
+[51, 30000] loss: 0.8216
+Accuracy of the network on the 10000 train images: 72.089 %
+[51, 40000] loss: 0.8272
+Accuracy of the network on the 10000 train images: 71.973 %
+[51, 50000] loss: 0.7892
+Accuracy of the network on the 10000 train images: 72.073 %
+[51, 10000] loss: 0.8746
+Accuracy of the network on the 10000 test images: 69.149 %
+
+Epoch: 52
+[52, 10000] loss: 0.7884
+Accuracy of the network on the 10000 train images: 72.822 %
+[52, 20000] loss: 0.7785
+Accuracy of the network on the 10000 train images: 73.040 %
+[52, 30000] loss: 0.8198
+Accuracy of the network on the 10000 train images: 72.535 %
+[52, 40000] loss: 0.8010
+Accuracy of the network on the 10000 train images: 72.542 %
+[52, 50000] loss: 0.8139
+Accuracy of the network on the 10000 train images: 72.453 %
+[52, 10000] loss: 0.8430
+Accuracy of the network on the 10000 test images: 70.931 %
+
+Epoch: 53
+[53, 10000] loss: 0.7710
+Accuracy of the network on the 10000 train images: 73.475 %
+[53, 20000] loss: 0.7908
+Accuracy of the network on the 10000 train images: 73.059 %
+[53, 30000] loss: 0.7876
+Accuracy of the network on the 10000 train images: 72.878 %
+[53, 40000] loss: 0.8018
+Accuracy of the network on the 10000 train images: 72.703 %
+[53, 50000] loss: 0.7998
+Accuracy of the network on the 10000 train images: 72.651 %
+[53, 10000] loss: 0.8332
+Accuracy of the network on the 10000 test images: 71.584 %
+Saving..
+
+Epoch: 54
+[54, 10000] loss: 0.7810
+Accuracy of the network on the 10000 train images: 73.069 %
+[54, 20000] loss: 0.8013
+Accuracy of the network on the 10000 train images: 72.777 %
+[54, 30000] loss: 0.8011
+Accuracy of the network on the 10000 train images: 72.752 %
+[54, 40000] loss: 0.7837
+Accuracy of the network on the 10000 train images: 72.886 %
+[54, 50000] loss: 0.7708
+Accuracy of the network on the 10000 train images: 72.943 %
+[54, 10000] loss: 0.8368
+Accuracy of the network on the 10000 test images: 71.248 %
+
+Epoch: 55
+[55, 10000] loss: 0.7849
+Accuracy of the network on the 10000 train images: 73.119 %
+[55, 20000] loss: 0.7765
+Accuracy of the network on the 10000 train images: 73.203 %
+[55, 30000] loss: 0.7757
+Accuracy of the network on the 10000 train images: 73.307 %
+[55, 40000] loss: 0.7673
+Accuracy of the network on the 10000 train images: 73.307 %
+[55, 50000] loss: 0.7868
+Accuracy of the network on the 10000 train images: 73.182 %
+[55, 10000] loss: 0.8155
+Accuracy of the network on the 10000 test images: 71.891 %
+Saving..
+
+Epoch: 56
+[56, 10000] loss: 0.7644
+Accuracy of the network on the 10000 train images: 73.663 %
+[56, 20000] loss: 0.7648
+Accuracy of the network on the 10000 train images: 73.668 %
+[56, 30000] loss: 0.7796
+Accuracy of the network on the 10000 train images: 73.571 %
+[56, 40000] loss: 0.7901
+Accuracy of the network on the 10000 train images: 73.309 %
+[56, 50000] loss: 0.7862
+Accuracy of the network on the 10000 train images: 73.275 %
+[56, 10000] loss: 0.8256
+Accuracy of the network on the 10000 test images: 71.614 %
+
+Epoch: 57
+[57, 10000] loss: 0.7652
+Accuracy of the network on the 10000 train images: 73.465 %
+[57, 20000] loss: 0.7560
+Accuracy of the network on the 10000 train images: 73.693 %
+[57, 30000] loss: 0.7488
+Accuracy of the network on the 10000 train images: 73.776 %
+[57, 40000] loss: 0.7790
+Accuracy of the network on the 10000 train images: 73.814 %
+[57, 50000] loss: 0.7753
+Accuracy of the network on the 10000 train images: 73.709 %
+[57, 10000] loss: 0.8301
+Accuracy of the network on the 10000 test images: 71.564 %
+
+Epoch: 58
+[58, 10000] loss: 0.7700
+Accuracy of the network on the 10000 train images: 72.772 %
+[58, 20000] loss: 0.7652
+Accuracy of the network on the 10000 train images: 73.441 %
+[58, 30000] loss: 0.7629
+Accuracy of the network on the 10000 train images: 73.535 %
+[58, 40000] loss: 0.7592
+Accuracy of the network on the 10000 train images: 73.493 %
+[58, 50000] loss: 0.7666
+Accuracy of the network on the 10000 train images: 73.465 %
+[58, 10000] loss: 0.8069
+Accuracy of the network on the 10000 test images: 72.337 %
+Saving..
+
+Epoch: 59
+[59, 10000] loss: 0.7438
+Accuracy of the network on the 10000 train images: 74.198 %
+[59, 20000] loss: 0.7634
+Accuracy of the network on the 10000 train images: 73.881 %
+[59, 30000] loss: 0.7494
+Accuracy of the network on the 10000 train images: 73.960 %
+[59, 40000] loss: 0.7569
+Accuracy of the network on the 10000 train images: 73.899 %
+[59, 50000] loss: 0.7457
+Accuracy of the network on the 10000 train images: 73.990 %
+[59, 10000] loss: 0.8175
+Accuracy of the network on the 10000 test images: 71.743 %
+
+Epoch: 60
+[60, 10000] loss: 0.7578
+Accuracy of the network on the 10000 train images: 73.960 %
+[60, 20000] loss: 0.7529
+Accuracy of the network on the 10000 train images: 74.124 %
+[60, 30000] loss: 0.7364
+Accuracy of the network on the 10000 train images: 74.238 %
+[60, 40000] loss: 0.7510
+Accuracy of the network on the 10000 train images: 74.158 %
+[60, 50000] loss: 0.7461
+Accuracy of the network on the 10000 train images: 74.259 %
+[60, 10000] loss: 0.8170
+Accuracy of the network on the 10000 test images: 71.248 %
+
+Epoch: 61
+[61, 10000] loss: 0.7449
+Accuracy of the network on the 10000 train images: 74.465 %
+[61, 20000] loss: 0.7327
+Accuracy of the network on the 10000 train images: 74.901 %
+[61, 30000] loss: 0.7292
+Accuracy of the network on the 10000 train images: 74.832 %
+[61, 40000] loss: 0.7575
+Accuracy of the network on the 10000 train images: 74.686 %
+[61, 50000] loss: 0.7700
+Accuracy of the network on the 10000 train images: 74.442 %
+[61, 10000] loss: 0.8138
+Accuracy of the network on the 10000 test images: 72.446 %
+Saving..
+
+Epoch: 62
+[62, 10000] loss: 0.7195
+Accuracy of the network on the 10000 train images: 75.109 %
+[62, 20000] loss: 0.7349
+Accuracy of the network on the 10000 train images: 74.970 %
+[62, 30000] loss: 0.7307
+Accuracy of the network on the 10000 train images: 75.109 %
+[62, 40000] loss: 0.7365
+Accuracy of the network on the 10000 train images: 74.965 %
+[62, 50000] loss: 0.7499
+Accuracy of the network on the 10000 train images: 74.754 %
+[62, 10000] loss: 0.8244
+Accuracy of the network on the 10000 test images: 71.693 %
+
+Epoch: 63
+[63, 10000] loss: 0.7103
+Accuracy of the network on the 10000 train images: 76.079 %
+[63, 20000] loss: 0.7305
+Accuracy of the network on the 10000 train images: 75.446 %
+[63, 30000] loss: 0.7461
+Accuracy of the network on the 10000 train images: 75.003 %
+[63, 40000] loss: 0.7223
+Accuracy of the network on the 10000 train images: 74.958 %
+[63, 50000] loss: 0.7394
+Accuracy of the network on the 10000 train images: 74.863 %
+[63, 10000] loss: 0.7738
+Accuracy of the network on the 10000 test images: 73.129 %
+Saving..
+
+Epoch: 64
+[64, 10000] loss: 0.7161
+Accuracy of the network on the 10000 train images: 76.020 %
+[64, 20000] loss: 0.7200
+Accuracy of the network on the 10000 train images: 75.738 %
+[64, 30000] loss: 0.7386
+Accuracy of the network on the 10000 train images: 75.244 %
+[64, 40000] loss: 0.7257
+Accuracy of the network on the 10000 train images: 75.119 %
+[64, 50000] loss: 0.7295
+Accuracy of the network on the 10000 train images: 75.093 %
+[64, 10000] loss: 0.7925
+Accuracy of the network on the 10000 test images: 72.653 %
+
+Epoch: 65
+[65, 10000] loss: 0.7120
+Accuracy of the network on the 10000 train images: 75.545 %
+[65, 20000] loss: 0.7015
+Accuracy of the network on the 10000 train images: 75.921 %
+[65, 30000] loss: 0.7163
+Accuracy of the network on the 10000 train images: 75.812 %
+[65, 40000] loss: 0.7391
+Accuracy of the network on the 10000 train images: 75.480 %
+[65, 50000] loss: 0.7387
+Accuracy of the network on the 10000 train images: 75.275 %
+[65, 10000] loss: 0.7822
+Accuracy of the network on the 10000 test images: 72.960 %
+
+Epoch: 66
+[66, 10000] loss: 0.7012
+Accuracy of the network on the 10000 train images: 75.990 %
+[66, 20000] loss: 0.7254
+Accuracy of the network on the 10000 train images: 75.455 %
+[66, 30000] loss: 0.7235
+Accuracy of the network on the 10000 train images: 75.528 %
+[66, 40000] loss: 0.7013
+Accuracy of the network on the 10000 train images: 75.644 %
+[66, 50000] loss: 0.7136
+Accuracy of the network on the 10000 train images: 75.584 %
+[66, 10000] loss: 0.7646
+Accuracy of the network on the 10000 test images: 73.614 %
+Saving..
+
+Epoch: 67
+[67, 10000] loss: 0.7166
+Accuracy of the network on the 10000 train images: 75.564 %
+[67, 20000] loss: 0.7130
+Accuracy of the network on the 10000 train images: 75.381 %
+[67, 30000] loss: 0.7085
+Accuracy of the network on the 10000 train images: 75.498 %
+[67, 40000] loss: 0.6987
+Accuracy of the network on the 10000 train images: 75.614 %
+[67, 50000] loss: 0.7134
+Accuracy of the network on the 10000 train images: 75.620 %
+[67, 10000] loss: 0.7736
+Accuracy of the network on the 10000 test images: 73.248 %
+
+Epoch: 68
+[68, 10000] loss: 0.7070
+Accuracy of the network on the 10000 train images: 76.178 %
+[68, 20000] loss: 0.6906
+Accuracy of the network on the 10000 train images: 76.505 %
+[68, 30000] loss: 0.7089
+Accuracy of the network on the 10000 train images: 76.155 %
+[68, 40000] loss: 0.7301
+Accuracy of the network on the 10000 train images: 75.928 %
+[68, 50000] loss: 0.7122
+Accuracy of the network on the 10000 train images: 75.752 %
+[68, 10000] loss: 0.7828
+Accuracy of the network on the 10000 test images: 73.545 %
+
+Epoch: 69
+[69, 10000] loss: 0.6962
+Accuracy of the network on the 10000 train images: 76.158 %
+[69, 20000] loss: 0.7077
+Accuracy of the network on the 10000 train images: 75.946 %
+[69, 30000] loss: 0.7081
+Accuracy of the network on the 10000 train images: 75.871 %
+[69, 40000] loss: 0.6894
+Accuracy of the network on the 10000 train images: 75.955 %
+[69, 50000] loss: 0.7075
+Accuracy of the network on the 10000 train images: 75.840 %
+[69, 10000] loss: 0.7888
+Accuracy of the network on the 10000 test images: 72.752 %
+
+Epoch: 70
+[70, 10000] loss: 0.7063
+Accuracy of the network on the 10000 train images: 75.723 %
+[70, 20000] loss: 0.6933
+Accuracy of the network on the 10000 train images: 76.040 %
+[70, 30000] loss: 0.7111
+Accuracy of the network on the 10000 train images: 75.785 %
+[70, 40000] loss: 0.7014
+Accuracy of the network on the 10000 train images: 75.681 %
+[70, 50000] loss: 0.6750
+Accuracy of the network on the 10000 train images: 75.851 %
+[70, 10000] loss: 0.7822
+Accuracy of the network on the 10000 test images: 73.149 %
+
+Epoch: 71
+[71, 10000] loss: 0.6809
+Accuracy of the network on the 10000 train images: 76.287 %
+[71, 20000] loss: 0.7011
+Accuracy of the network on the 10000 train images: 75.856 %
+[71, 30000] loss: 0.6825
+Accuracy of the network on the 10000 train images: 76.165 %
+[71, 40000] loss: 0.6983
+Accuracy of the network on the 10000 train images: 76.285 %
+[71, 50000] loss: 0.6857
+Accuracy of the network on the 10000 train images: 76.329 %
+[71, 10000] loss: 0.7914
+Accuracy of the network on the 10000 test images: 72.535 %
+
+Epoch: 72
+[72, 10000] loss: 0.6535
+Accuracy of the network on the 10000 train images: 77.198 %
+[72, 20000] loss: 0.6820
+Accuracy of the network on the 10000 train images: 76.955 %
+[72, 30000] loss: 0.6938
+Accuracy of the network on the 10000 train images: 76.584 %
+[72, 40000] loss: 0.6690
+Accuracy of the network on the 10000 train images: 76.668 %
+[72, 50000] loss: 0.6878
+Accuracy of the network on the 10000 train images: 76.578 %
+[72, 10000] loss: 0.7961
+Accuracy of the network on the 10000 test images: 72.574 %
+
+Epoch: 73
+[73, 10000] loss: 0.6636
+Accuracy of the network on the 10000 train images: 77.000 %
+[73, 20000] loss: 0.6715
+Accuracy of the network on the 10000 train images: 76.876 %
+[73, 30000] loss: 0.6829
+Accuracy of the network on the 10000 train images: 76.568 %
+[73, 40000] loss: 0.6732
+Accuracy of the network on the 10000 train images: 76.616 %
+[73, 50000] loss: 0.6827
+Accuracy of the network on the 10000 train images: 76.642 %
+[73, 10000] loss: 0.7668
+Accuracy of the network on the 10000 test images: 73.941 %
+Saving..
+
+Epoch: 74
+[74, 10000] loss: 0.6529
+Accuracy of the network on the 10000 train images: 77.317 %
+[74, 20000] loss: 0.6742
+Accuracy of the network on the 10000 train images: 77.168 %
+[74, 30000] loss: 0.6735
+Accuracy of the network on the 10000 train images: 77.129 %
+[74, 40000] loss: 0.6789
+Accuracy of the network on the 10000 train images: 77.079 %
+[74, 50000] loss: 0.6889
+Accuracy of the network on the 10000 train images: 76.915 %
+[74, 10000] loss: 0.7785
+Accuracy of the network on the 10000 test images: 73.109 %
+
+Epoch: 75
+[75, 10000] loss: 0.6653
+Accuracy of the network on the 10000 train images: 77.663 %
+[75, 20000] loss: 0.6603
+Accuracy of the network on the 10000 train images: 77.629 %
+[75, 30000] loss: 0.6839
+Accuracy of the network on the 10000 train images: 77.086 %
+[75, 40000] loss: 0.6689
+Accuracy of the network on the 10000 train images: 76.975 %
+[75, 50000] loss: 0.6780
+Accuracy of the network on the 10000 train images: 76.885 %
+[75, 10000] loss: 0.7734
+Accuracy of the network on the 10000 test images: 73.535 %
+
+Epoch: 76
+[76, 10000] loss: 0.6713
+Accuracy of the network on the 10000 train images: 77.089 %
+[76, 20000] loss: 0.6664
+Accuracy of the network on the 10000 train images: 77.079 %
+[76, 30000] loss: 0.6564
+Accuracy of the network on the 10000 train images: 77.208 %
+[76, 40000] loss: 0.6591
+Accuracy of the network on the 10000 train images: 77.161 %
+[76, 50000] loss: 0.6679
+Accuracy of the network on the 10000 train images: 77.174 %
+[76, 10000] loss: 0.7763
+Accuracy of the network on the 10000 test images: 73.139 %
+
+Epoch: 77
+[77, 10000] loss: 0.6475
+Accuracy of the network on the 10000 train images: 77.525 %
+[77, 20000] loss: 0.6488
+Accuracy of the network on the 10000 train images: 77.559 %
+[77, 30000] loss: 0.6932
+Accuracy of the network on the 10000 train images: 76.977 %
+[77, 40000] loss: 0.6980
+Accuracy of the network on the 10000 train images: 76.800 %
+[77, 50000] loss: 0.6628
+Accuracy of the network on the 10000 train images: 76.859 %
+[77, 10000] loss: 0.7870
+Accuracy of the network on the 10000 test images: 73.059 %
+
+Epoch: 78
+[78, 10000] loss: 0.6575
+Accuracy of the network on the 10000 train images: 77.307 %
+[78, 20000] loss: 0.6560
+Accuracy of the network on the 10000 train images: 77.347 %
+[78, 30000] loss: 0.6576
+Accuracy of the network on the 10000 train images: 77.337 %
+[78, 40000] loss: 0.6491
+Accuracy of the network on the 10000 train images: 77.446 %
+[78, 50000] loss: 0.6619
+Accuracy of the network on the 10000 train images: 77.451 %
+[78, 10000] loss: 0.7604
+Accuracy of the network on the 10000 test images: 74.198 %
+Saving..
+
+Epoch: 79
+[79, 10000] loss: 0.6357
+Accuracy of the network on the 10000 train images: 78.238 %
+[79, 20000] loss: 0.6607
+Accuracy of the network on the 10000 train images: 77.876 %
+[79, 30000] loss: 0.6805
+Accuracy of the network on the 10000 train images: 77.561 %
+[79, 40000] loss: 0.6457
+Accuracy of the network on the 10000 train images: 77.621 %
+[79, 50000] loss: 0.6595
+Accuracy of the network on the 10000 train images: 77.574 %
+[79, 10000] loss: 0.7920
+Accuracy of the network on the 10000 test images: 73.119 %
+
+Epoch: 80
+[80, 10000] loss: 0.6492
+Accuracy of the network on the 10000 train images: 77.584 %
+[80, 20000] loss: 0.6444
+Accuracy of the network on the 10000 train images: 77.584 %
+[80, 30000] loss: 0.6551
+Accuracy of the network on the 10000 train images: 77.363 %
+[80, 40000] loss: 0.6440
+Accuracy of the network on the 10000 train images: 77.438 %
+[80, 50000] loss: 0.6612
+Accuracy of the network on the 10000 train images: 77.370 %
+[80, 10000] loss: 0.7825
+Accuracy of the network on the 10000 test images: 73.099 %
+
+Epoch: 81
+[81, 10000] loss: 0.6304
+Accuracy of the network on the 10000 train images: 78.079 %
+[81, 20000] loss: 0.6617
+Accuracy of the network on the 10000 train images: 77.673 %
+[81, 30000] loss: 0.6389
+Accuracy of the network on the 10000 train images: 77.904 %
+[81, 40000] loss: 0.6395
+Accuracy of the network on the 10000 train images: 78.002 %
+[81, 50000] loss: 0.6482
+Accuracy of the network on the 10000 train images: 77.909 %
+[81, 10000] loss: 0.7921
+Accuracy of the network on the 10000 test images: 73.545 %
+
+Epoch: 82
+[82, 10000] loss: 0.6348
+Accuracy of the network on the 10000 train images: 78.059 %
+[82, 20000] loss: 0.6336
+Accuracy of the network on the 10000 train images: 78.153 %
+[82, 30000] loss: 0.6346
+Accuracy of the network on the 10000 train images: 78.040 %
+[82, 40000] loss: 0.6619
+Accuracy of the network on the 10000 train images: 77.782 %
+[82, 50000] loss: 0.6315
+Accuracy of the network on the 10000 train images: 77.776 %
+[82, 10000] loss: 0.7970
+Accuracy of the network on the 10000 test images: 73.446 %
+
+Epoch: 83
+[83, 10000] loss: 0.6231
+Accuracy of the network on the 10000 train images: 77.792 %
+[83, 20000] loss: 0.6401
+Accuracy of the network on the 10000 train images: 77.931 %
+[83, 30000] loss: 0.6499
+Accuracy of the network on the 10000 train images: 77.845 %
+[83, 40000] loss: 0.6407
+Accuracy of the network on the 10000 train images: 77.936 %
+[83, 50000] loss: 0.6401
+Accuracy of the network on the 10000 train images: 77.917 %
+[83, 10000] loss: 0.7632
+Accuracy of the network on the 10000 test images: 73.871 %
+
+Epoch: 84
+[84, 10000] loss: 0.6286
+Accuracy of the network on the 10000 train images: 78.842 %
+[84, 20000] loss: 0.6299
+Accuracy of the network on the 10000 train images: 78.599 %
+[84, 30000] loss: 0.6327
+Accuracy of the network on the 10000 train images: 78.442 %
+[84, 40000] loss: 0.6175
+Accuracy of the network on the 10000 train images: 78.525 %
+[84, 50000] loss: 0.6385
+Accuracy of the network on the 10000 train images: 78.350 %
+[84, 10000] loss: 0.7556
+Accuracy of the network on the 10000 test images: 74.653 %
+Saving..
+
+Epoch: 85
+[85, 10000] loss: 0.6242
+Accuracy of the network on the 10000 train images: 78.624 %
+[85, 20000] loss: 0.6220
+Accuracy of the network on the 10000 train images: 78.559 %
+[85, 30000] loss: 0.6207
+Accuracy of the network on the 10000 train images: 78.502 %
+[85, 40000] loss: 0.6252
+Accuracy of the network on the 10000 train images: 78.493 %
+[85, 50000] loss: 0.6404
+Accuracy of the network on the 10000 train images: 78.448 %
+[85, 10000] loss: 0.7520
+Accuracy of the network on the 10000 test images: 74.416 %
+
+Epoch: 86
+[86, 10000] loss: 0.6315
+Accuracy of the network on the 10000 train images: 78.158 %
+[86, 20000] loss: 0.6295
+Accuracy of the network on the 10000 train images: 78.144 %
+[86, 30000] loss: 0.6108
+Accuracy of the network on the 10000 train images: 78.502 %
+[86, 40000] loss: 0.6238
+Accuracy of the network on the 10000 train images: 78.599 %
+[86, 50000] loss: 0.6145
+Accuracy of the network on the 10000 train images: 78.653 %
+[86, 10000] loss: 0.7557
+Accuracy of the network on the 10000 test images: 74.485 %
+
+Epoch: 87
+[87, 10000] loss: 0.6155
+Accuracy of the network on the 10000 train images: 78.931 %
+[87, 20000] loss: 0.6148
+Accuracy of the network on the 10000 train images: 79.045 %
+[87, 30000] loss: 0.6309
+Accuracy of the network on the 10000 train images: 78.782 %
+[87, 40000] loss: 0.5947
+Accuracy of the network on the 10000 train images: 78.854 %
+[87, 50000] loss: 0.6293
+Accuracy of the network on the 10000 train images: 78.749 %
+[87, 10000] loss: 0.7753
+Accuracy of the network on the 10000 test images: 73.416 %
+
+Epoch: 88
+[88, 10000] loss: 0.6081
+Accuracy of the network on the 10000 train images: 79.396 %
+[88, 20000] loss: 0.6286
+Accuracy of the network on the 10000 train images: 79.025 %
+[88, 30000] loss: 0.6035
+Accuracy of the network on the 10000 train images: 78.891 %
+[88, 40000] loss: 0.5992
+Accuracy of the network on the 10000 train images: 78.983 %
+[88, 50000] loss: 0.6152
+Accuracy of the network on the 10000 train images: 78.941 %
+[88, 10000] loss: 0.7702
+Accuracy of the network on the 10000 test images: 73.495 %
+
+Epoch: 89
+[89, 10000] loss: 0.5963
+Accuracy of the network on the 10000 train images: 79.099 %
+[89, 20000] loss: 0.6155
+Accuracy of the network on the 10000 train images: 79.139 %
+[89, 30000] loss: 0.6082
+Accuracy of the network on the 10000 train images: 79.053 %
+[89, 40000] loss: 0.6253
+Accuracy of the network on the 10000 train images: 79.032 %
+[89, 50000] loss: 0.6029
+Accuracy of the network on the 10000 train images: 79.024 %
+[89, 10000] loss: 0.7585
+Accuracy of the network on the 10000 test images: 74.842 %
+Saving..
+
+Epoch: 90
+[90, 10000] loss: 0.5718
+Accuracy of the network on the 10000 train images: 80.455 %
+[90, 20000] loss: 0.5893
+Accuracy of the network on the 10000 train images: 79.960 %
+[90, 30000] loss: 0.5974
+Accuracy of the network on the 10000 train images: 79.723 %
+[90, 40000] loss: 0.6177
+Accuracy of the network on the 10000 train images: 79.493 %
+[90, 50000] loss: 0.6124
+Accuracy of the network on the 10000 train images: 79.356 %
+[90, 10000] loss: 0.7601
+Accuracy of the network on the 10000 test images: 74.455 %
+
+Epoch: 91
+[91, 10000] loss: 0.5792
+Accuracy of the network on the 10000 train images: 80.277 %
+[91, 20000] loss: 0.6036
+Accuracy of the network on the 10000 train images: 79.609 %
+[91, 30000] loss: 0.6022
+Accuracy of the network on the 10000 train images: 79.541 %
+[91, 40000] loss: 0.5999
+Accuracy of the network on the 10000 train images: 79.423 %
+[91, 50000] loss: 0.6168
+Accuracy of the network on the 10000 train images: 79.271 %
+[91, 10000] loss: 0.7780
+Accuracy of the network on the 10000 test images: 73.832 %
+
+Epoch: 92
+[92, 10000] loss: 0.5945
+Accuracy of the network on the 10000 train images: 79.822 %
+[92, 20000] loss: 0.6097
+Accuracy of the network on the 10000 train images: 79.401 %
+[92, 30000] loss: 0.5890
+Accuracy of the network on the 10000 train images: 79.601 %
+[92, 40000] loss: 0.6055
+Accuracy of the network on the 10000 train images: 79.562 %
+[92, 50000] loss: 0.6094
+Accuracy of the network on the 10000 train images: 79.392 %
+[92, 10000] loss: 0.7585
+Accuracy of the network on the 10000 test images: 74.733 %
+
+Epoch: 93
+[93, 10000] loss: 0.5863
+Accuracy of the network on the 10000 train images: 80.059 %
+[93, 20000] loss: 0.6025
+Accuracy of the network on the 10000 train images: 79.678 %
+[93, 30000] loss: 0.5789
+Accuracy of the network on the 10000 train images: 79.818 %
+[93, 40000] loss: 0.6003
+Accuracy of the network on the 10000 train images: 79.728 %
+[93, 50000] loss: 0.5929
+Accuracy of the network on the 10000 train images: 79.741 %
+[93, 10000] loss: 0.8021
+Accuracy of the network on the 10000 test images: 73.475 %
+
+Epoch: 94
+[94, 10000] loss: 0.5835
+Accuracy of the network on the 10000 train images: 79.663 %
+[94, 20000] loss: 0.5804
+Accuracy of the network on the 10000 train images: 79.861 %
+[94, 30000] loss: 0.5838
+Accuracy of the network on the 10000 train images: 79.871 %
+[94, 40000] loss: 0.5882
+Accuracy of the network on the 10000 train images: 79.782 %
+[94, 50000] loss: 0.6021
+Accuracy of the network on the 10000 train images: 79.596 %
+[94, 10000] loss: 0.7545
+Accuracy of the network on the 10000 test images: 74.465 %
+
+Epoch: 95
+[95, 10000] loss: 0.5805
+Accuracy of the network on the 10000 train images: 80.525 %
+[95, 20000] loss: 0.5778
+Accuracy of the network on the 10000 train images: 80.495 %
+[95, 30000] loss: 0.5907
+Accuracy of the network on the 10000 train images: 80.125 %
+[95, 40000] loss: 0.5777
+Accuracy of the network on the 10000 train images: 80.163 %
+[95, 50000] loss: 0.5928
+Accuracy of the network on the 10000 train images: 80.093 %
+[95, 10000] loss: 0.7527
+Accuracy of the network on the 10000 test images: 74.772 %
+
+Epoch: 96
+[96, 10000] loss: 0.5824
+Accuracy of the network on the 10000 train images: 80.000 %
+[96, 20000] loss: 0.5844
+Accuracy of the network on the 10000 train images: 80.035 %
+[96, 30000] loss: 0.5894
+Accuracy of the network on the 10000 train images: 79.960 %
+[96, 40000] loss: 0.5906
+Accuracy of the network on the 10000 train images: 79.787 %
+[96, 50000] loss: 0.5778
+Accuracy of the network on the 10000 train images: 79.768 %
+[96, 10000] loss: 0.7847
+Accuracy of the network on the 10000 test images: 73.881 %
+
+Epoch: 97
+[97, 10000] loss: 0.5678
+Accuracy of the network on the 10000 train images: 80.475 %
+[97, 20000] loss: 0.5891
+Accuracy of the network on the 10000 train images: 80.262 %
+[97, 30000] loss: 0.5833
+Accuracy of the network on the 10000 train images: 80.172 %
+[97, 40000] loss: 0.5767
+Accuracy of the network on the 10000 train images: 80.168 %
+[97, 50000] loss: 0.6042
+Accuracy of the network on the 10000 train images: 79.943 %
+[97, 10000] loss: 0.7459
+Accuracy of the network on the 10000 test images: 75.030 %
+Saving..
+
+Epoch: 98
+[98, 10000] loss: 0.5651
+Accuracy of the network on the 10000 train images: 80.673 %
+[98, 20000] loss: 0.5821
+Accuracy of the network on the 10000 train images: 80.064 %
+[98, 30000] loss: 0.5715
+Accuracy of the network on the 10000 train images: 80.323 %
+[98, 40000] loss: 0.5725
+Accuracy of the network on the 10000 train images: 80.327 %
+[98, 50000] loss: 0.5783
+Accuracy of the network on the 10000 train images: 80.341 %
+[98, 10000] loss: 0.7672
+Accuracy of the network on the 10000 test images: 74.099 %
+
+Epoch: 99
+[99, 10000] loss: 0.5692
+Accuracy of the network on the 10000 train images: 80.465 %
+[99, 20000] loss: 0.5498
+Accuracy of the network on the 10000 train images: 80.609 %
+[99, 30000] loss: 0.5906
+Accuracy of the network on the 10000 train images: 80.320 %
+[99, 40000] loss: 0.5868
+Accuracy of the network on the 10000 train images: 80.106 %
+[99, 50000] loss: 0.5752
+Accuracy of the network on the 10000 train images: 80.097 %
+[99, 10000] loss: 0.7611
+Accuracy of the network on the 10000 test images: 74.574 %
+
+进程已结束,退出代码0
